@@ -2716,6 +2716,13 @@ com.google.ads.y -> com.google.ads.cf:
 com.google.ads.z -> com.google.ads.cg:
     com.google.ads.AdActivity$StaticMethodWrapper a -> a
     void a(com.google.ads.internal.d,java.util.HashMap,android.webkit.WebView) -> a
+org.jefferyemanuel.n4fix.Consts -> org.jefferyemanuel.n4fix.a:
+org.jefferyemanuel.n4fix.Consts$CALL_TYPE -> org.jefferyemanuel.n4fix.b:
+    org.jefferyemanuel.n4fix.Consts$CALL_TYPE CALL_STARTED -> a
+    org.jefferyemanuel.n4fix.Consts$CALL_TYPE CALL_STOPPED -> b
+    org.jefferyemanuel.n4fix.Consts$CALL_TYPE[] ENUM$VALUES -> c
+    org.jefferyemanuel.n4fix.Consts$CALL_TYPE[] values() -> values
+    org.jefferyemanuel.n4fix.Consts$CALL_TYPE valueOf(java.lang.String) -> valueOf
 org.jefferyemanuel.n4fix.N4FixBackgroundService -> org.jefferyemanuel.n4fix.N4FixBackgroundService:
     org.jefferyemanuel.n4fix.N4FixServiceReceiver phoneStateReceiver -> a
     android.os.IBinder onBind(android.content.Intent) -> onBind
@@ -2723,19 +2730,20 @@ org.jefferyemanuel.n4fix.N4FixBackgroundService -> org.jefferyemanuel.n4fix.N4Fi
     void onCreate() -> onCreate
     int onStartCommand(android.content.Intent,int,int) -> onStartCommand
     void unregisterListeners() -> a
-org.jefferyemanuel.n4fix.N4FixServiceReceiver -> org.jefferyemanuel.n4fix.a:
+org.jefferyemanuel.n4fix.N4FixServiceReceiver -> org.jefferyemanuel.n4fix.c:
     android.hardware.SensorManager mSensorManager -> a
     org.jefferyemanuel.n4fix.ShakeEventListener mSensorEventListener -> b
     org.jefferyemanuel.n4fix.ScreenEventsReceiver mScreenEventsReceiver -> c
     android.content.Context context -> d
+    org.jefferyemanuel.n4fix.Consts$CALL_TYPE mCallType -> e
     android.content.Context getContext() -> a
     void setContext(android.content.Context) -> a
     void onReceive(android.content.Context,android.content.Intent) -> onReceive
     void startSensor() -> b
     void onShake() -> c
-    void wakeUp() -> e
+    void wakeUp(int) -> a
     void unregisterListeners() -> d
-org.jefferyemanuel.n4fix.ScreenEventsReceiver -> org.jefferyemanuel.n4fix.b:
+org.jefferyemanuel.n4fix.ScreenEventsReceiver -> org.jefferyemanuel.n4fix.d:
     android.os.PowerManager$WakeLock wakeLock -> a
     void onReceive(android.content.Context,android.content.Intent) -> onReceive
     void cleanUpCpuLocks() -> a
@@ -2767,15 +2775,11 @@ org.jefferyemanuel.n4fix.SettingsN4Activity -> org.jefferyemanuel.n4fix.Settings
     void pushSMS() -> b
     void setupSimplePreferencesScreen() -> c
     void onResume() -> onResume
-    boolean onIsMultiPane() -> onIsMultiPane
-    boolean isXLargeTablet(android.content.Context) -> a
-    boolean isSimplePreferences(android.content.Context) -> b
-    void onBuildHeaders(java.util.List) -> onBuildHeaders
     void bindPreferenceSummaryToValue(android.preference.Preference) -> a
     void setAdvertisment() -> a
-org.jefferyemanuel.n4fix.SettingsN4Activity$1 -> org.jefferyemanuel.n4fix.c:
+org.jefferyemanuel.n4fix.SettingsN4Activity$1 -> org.jefferyemanuel.n4fix.e:
     boolean onPreferenceChange(android.preference.Preference,java.lang.Object) -> onPreferenceChange
-org.jefferyemanuel.n4fix.ShakeEventListener -> org.jefferyemanuel.n4fix.d:
+org.jefferyemanuel.n4fix.ShakeEventListener -> org.jefferyemanuel.n4fix.f:
     int MIN_FORCE -> a
     long mFirstDirectionChangeTime -> b
     long mLastDirectionChangeTime -> c
@@ -2789,7 +2793,7 @@ org.jefferyemanuel.n4fix.ShakeEventListener -> org.jefferyemanuel.n4fix.d:
     void onSensorChanged(android.hardware.SensorEvent) -> onSensorChanged
     void resetShakeParameters() -> a
     void onAccuracyChanged(android.hardware.Sensor,int) -> onAccuracyChanged
-org.jefferyemanuel.n4fix.ShakeEventListener$OnShakeListener -> org.jefferyemanuel.n4fix.e:
+org.jefferyemanuel.n4fix.ShakeEventListener$OnShakeListener -> org.jefferyemanuel.n4fix.g:
     void onShake() -> c
 org.jefferyemanuel.n4fix.myStartupIntentReceiver -> org.jefferyemanuel.n4fix.myStartupIntentReceiver:
     java.lang.String TAG -> a

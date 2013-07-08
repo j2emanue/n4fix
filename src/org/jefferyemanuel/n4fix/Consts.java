@@ -40,6 +40,12 @@ public class Consts {
     //wakelock constants
     public static final int WAKELOCK_ELAPSEDTIME=10000;
     
+    //call type definitions
+    public enum CALL_TYPE {
+		CALL_STARTED, CALL_STOPPED
+	};
+	
+    
     //sensor constants
     public static final int MILLISECONDS_PER_SECOND = 1000;
     public static final int DETECTION_INTERVAL_SECONDS = 20;

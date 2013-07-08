@@ -96,6 +96,8 @@ com.google.ads.util.AdUtil$a: com.google.ads.util.AdUtil$a[] values()
 com.google.ads.util.AdUtil$a: com.google.ads.util.AdUtil$a valueOf(java.lang.String)
 com.google.ads.util.b$a: com.google.ads.util.b$a[] values()
 com.google.ads.util.b$a: com.google.ads.util.b$a valueOf(java.lang.String)
+org.jefferyemanuel.n4fix.Consts$CALL_TYPE: org.jefferyemanuel.n4fix.Consts$CALL_TYPE[] values()
+org.jefferyemanuel.n4fix.Consts$CALL_TYPE: org.jefferyemanuel.n4fix.Consts$CALL_TYPE valueOf(java.lang.String)
 org.jefferyemanuel.n4fix.N4FixBackgroundService
 org.jefferyemanuel.n4fix.N4FixBackgroundService: N4FixBackgroundService()
 org.jefferyemanuel.n4fix.R$color: int black
@@ -142,7 +144,6 @@ org.jefferyemanuel.n4fix.R$style: int AppTheme
 org.jefferyemanuel.n4fix.R$xml: int force_dialog_layout
 org.jefferyemanuel.n4fix.R$xml: int pref_force_applied
 org.jefferyemanuel.n4fix.R$xml: int pref_general
-org.jefferyemanuel.n4fix.R$xml: int pref_headers
 org.jefferyemanuel.n4fix.SeekBarPreference
 org.jefferyemanuel.n4fix.SeekBarPreference: SeekBarPreference(android.content.Context,android.util.AttributeSet)
 org.jefferyemanuel.n4fix.SettingsN4Activity

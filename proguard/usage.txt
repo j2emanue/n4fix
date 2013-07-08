@@ -1078,7 +1078,15 @@ com.google.ads.util.a:
     37:38:public static void a(boolean)
     53:55:public static void a(java.lang.Object)
 org.jefferyemanuel.n4fix.BuildConfig
-org.jefferyemanuel.n4fix.Consts
+org.jefferyemanuel.n4fix.Consts:
+    public static final boolean DEVELOPER_MODE
+    public static final java.lang.String TAG
+    public static final java.lang.String admob_publisherID
+    public static final int WAKELOCK_ELAPSEDTIME
+    public static final int MILLISECONDS_PER_SECOND
+    public static final int DETECTION_INTERVAL_SECONDS
+    public static final int DETECTION_INTERVAL_MILLISECONDS
+    28:30:private Consts()
 org.jefferyemanuel.n4fix.R
 org.jefferyemanuel.n4fix.R$attr
 org.jefferyemanuel.n4fix.R$color
@@ -1092,14 +1100,10 @@ org.jefferyemanuel.n4fix.R$style
 org.jefferyemanuel.n4fix.R$xml
 org.jefferyemanuel.n4fix.SeekBarPreference:
     private static final java.lang.String androidns
-    130:130:public void setMax(int)
-    131:131:public int getMax()
+    134:134:public void setMax(int)
+    135:135:public int getMax()
 org.jefferyemanuel.n4fix.SettingsN4Activity:
-    private static final boolean ALWAYS_SIMPLE_PREFS
-    349:363:public static void createToast(java.lang.String,android.content.Context)
-org.jefferyemanuel.n4fix.SettingsN4Activity$DataSyncPreferenceFragment
-org.jefferyemanuel.n4fix.SettingsN4Activity$GeneralPreferenceFragment
-org.jefferyemanuel.n4fix.SettingsN4Activity$NotificationPreferenceFragment
+    250:264:public static void createToast(java.lang.String,android.content.Context)
 org.jefferyemanuel.n4fix.ShakeEventListener:
     private static final int MIN_DIRECTION_CHANGE
     private static final int MAX_PAUSE_BETHWEEN_DIRECTION_CHANGE

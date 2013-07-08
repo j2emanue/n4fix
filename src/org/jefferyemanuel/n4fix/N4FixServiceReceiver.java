@@ -1,5 +1,6 @@
 package org.jefferyemanuel.n4fix;
 
+import org.jefferyemanuel.n4fix.Consts.CALL_TYPE;
 import org.jefferyemanuel.n4fix.ShakeEventListener.OnShakeListener;
 
 import android.content.BroadcastReceiver;
@@ -11,11 +12,9 @@ import android.hardware.Sensor;
 import android.hardware.SensorManager;
 import android.os.PowerManager;
 import android.os.PowerManager.WakeLock;
-import android.preference.PreferenceActivity;
 import android.preference.PreferenceManager;
 import android.telephony.TelephonyManager;
 import android.util.Log;
-
 
 /**
  * A {@link BroadcastReceiver} that also listens for sensor shake events and reacts by holding a full cpu wakelock for 
@@ -30,6 +29,11 @@ public class N4FixServiceReceiver extends BroadcastReceiver implements
 	private ScreenEventsReceiver mScreenEventsReceiver; //listens for screen off/on events
 	private Context context;
 
+	
+
+	private CALL_TYPE mCallType;
+	
+	
 	public Context getContext() {
 		return context;
 	}
@@ -47,23 +51,38 @@ public class N4FixServiceReceiver extends BroadcastReceiver implements
 			Log.v(Consts.TAG, "Device Telephony State Is:" + newPhoneState);
 
 		if (TelephonyManager.EXTRA_STATE_IDLE.equals(newPhoneState)) {
-			unregisterListeners();
+			if (mCallType == CALL_TYPE.CALL_STARTED) {
+				mCallType = CALL_TYPE.CALL_STOPPED;
+				unregisterListeners();
+			}
+
 		}
 
 		if (TelephonyManager.EXTRA_STATE_OFFHOOK.equals(newPhoneState)) {
-			//set the context
-			setContext(context);
-			/* now that phone is OFFHOOK lets start listening for shake events*/
-			startSensor();
 
-			IntentFilter iFilter = new IntentFilter();
-			iFilter.addAction(Intent.ACTION_SCREEN_OFF);
-			iFilter.addAction(Intent.ACTION_SCREEN_ON);
+			if (mCallType != CALL_TYPE.CALL_STARTED) {
 
-			/* now that phone is OFFHOOK lets begin listening for screen off/on events and gain a partial wakelock
-			 * accordingly*/
-			mScreenEventsReceiver = new ScreenEventsReceiver();
-			context.registerReceiver(mScreenEventsReceiver, iFilter);
+				mCallType = CALL_TYPE.CALL_STARTED;
+				//set the context
+				setContext(context);
+				/*
+				 * now that phone is OFFHOOK lets start listening for shake
+				 * events
+				 */
+				startSensor();
+
+				IntentFilter iFilter = new IntentFilter();
+				iFilter.addAction(Intent.ACTION_SCREEN_OFF);
+				iFilter.addAction(Intent.ACTION_SCREEN_ON);
+
+				/*
+				 * now that phone is OFFHOOK lets begin listening for screen
+				 * off/on events and gain a partial wakelock accordingly
+				 */
+				mScreenEventsReceiver = new ScreenEventsReceiver();
+				context.registerReceiver(mScreenEventsReceiver, iFilter);
+			}
+
 		}
 	}
 
