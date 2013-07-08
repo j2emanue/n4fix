@@ -1,0 +1,15 @@
+# view AndroidManifest.xml #generated:81
+-keep class com.google.ads.AdActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:67
+-keep class org.jefferyemanuel.n4fix.N4FixBackgroundService { <init>(...); }
+
+# view res/xml/pref_force_applied.xml #generated:5
+-keep class org.jefferyemanuel.n4fix.SeekBarPreference { <init>(...); }
+
+# view AndroidManifest.xml #generated:57
+-keep class org.jefferyemanuel.n4fix.SettingsN4Activity { <init>(...); }
+
+# view AndroidManifest.xml #generated:73
+-keep class org.jefferyemanuel.n4fix.myStartupIntentReceiver { <init>(...); }
+
