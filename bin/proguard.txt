@@ -1,18 +1,18 @@
-# view AndroidManifest.xml #generated:81
+# view AndroidManifest.xml #generated:82
 -keep class com.google.ads.AdActivity { <init>(...); }
 
 # view res/layout/config.xml #generated:32
 -keep class com.google.android.gms.plus.PlusOneButton { <init>(...); }
 
-# view AndroidManifest.xml #generated:67
+# view AndroidManifest.xml #generated:68
 -keep class org.jefferyemanuel.n4fix.N4FixBackgroundService { <init>(...); }
 
 # view res/xml/pref_force_applied.xml #generated:5
 -keep class org.jefferyemanuel.n4fix.SeekBarPreference { <init>(...); }
 
-# view AndroidManifest.xml #generated:57
+# view AndroidManifest.xml #generated:58
 -keep class org.jefferyemanuel.n4fix.SettingsN4Activity { <init>(...); }
 
-# view AndroidManifest.xml #generated:73
+# view AndroidManifest.xml #generated:74
 -keep class org.jefferyemanuel.n4fix.myStartupIntentReceiver { <init>(...); }
 
