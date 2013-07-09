@@ -30,7 +30,7 @@ public class Consts {
 	}
 	
 	//developer and logging options
-    public static final boolean DEVELOPER_MODE = false;
+    public static final boolean DEVELOPER_MODE =false;
     public static final String TAG="n4fix";
 
     
@@ -53,4 +53,6 @@ public class Consts {
             MILLISECONDS_PER_SECOND * DETECTION_INTERVAL_SECONDS;
     
     
+    //Google services related
+    public static final int REQUEST_CODE_RESOLVE_ERR = 9090;
 }

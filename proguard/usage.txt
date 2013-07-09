@@ -1,3 +1,4 @@
+android.UnusedStub
 android.support.v4.accessibilityservice.AccessibilityServiceInfoCompat
 android.support.v4.accessibilityservice.AccessibilityServiceInfoCompat$AccessibilityServiceInfoIcsImpl
 android.support.v4.accessibilityservice.AccessibilityServiceInfoCompat$AccessibilityServiceInfoStubImpl
@@ -1077,6 +1078,1223 @@ com.google.ads.searchads.SearchAdRequest:
 com.google.ads.util.a:
     37:38:public static void a(boolean)
     53:55:public static void a(java.lang.Object)
+com.google.android.gms.R
+com.google.android.gms.R$attr
+com.google.android.gms.R$color
+com.google.android.gms.R$drawable
+com.google.android.gms.R$id
+com.google.android.gms.R$string
+com.google.android.gms.R$styleable
+com.google.android.gms.appstate.AppState
+com.google.android.gms.appstate.AppStateBuffer
+com.google.android.gms.appstate.AppStateClient
+com.google.android.gms.appstate.AppStateClient$1
+com.google.android.gms.appstate.AppStateClient$Builder
+com.google.android.gms.appstate.OnSignOutCompleteListener
+com.google.android.gms.appstate.OnStateDeletedListener
+com.google.android.gms.appstate.OnStateListLoadedListener
+com.google.android.gms.appstate.OnStateLoadedListener
+com.google.android.gms.auth.GoogleAuthException
+com.google.android.gms.auth.GoogleAuthUtil
+com.google.android.gms.auth.GooglePlayServicesAvailabilityException
+com.google.android.gms.auth.UserRecoverableAuthException
+com.google.android.gms.auth.UserRecoverableNotifiedException
+com.google.android.gms.common.AccountPicker
+com.google.android.gms.common.ConnectionResult:
+    public static final int SUCCESS
+    public static final int SERVICE_MISSING
+    public static final int SERVICE_VERSION_UPDATE_REQUIRED
+    public static final int SERVICE_DISABLED
+    public static final int SIGN_IN_REQUIRED
+    public static final int INVALID_ACCOUNT
+    public static final int RESOLUTION_REQUIRED
+    public static final int NETWORK_ERROR
+    public static final int INTERNAL_ERROR
+    public static final int SERVICE_INVALID
+    public static final int DEVELOPER_ERROR
+    public static final int LICENSE_CHECK_FAILED
+    public int getErrorCode()
+    public android.app.PendingIntent getResolution()
+com.google.android.gms.common.GooglePlayServicesClient:
+    public abstract void connect()
+    public abstract void disconnect()
+    public abstract boolean isConnected()
+    public abstract boolean isConnecting()
+    public abstract void registerConnectionCallbacks(com.google.android.gms.common.GooglePlayServicesClient$ConnectionCallbacks)
+    public abstract boolean isConnectionCallbacksRegistered(com.google.android.gms.common.GooglePlayServicesClient$ConnectionCallbacks)
+    public abstract void unregisterConnectionCallbacks(com.google.android.gms.common.GooglePlayServicesClient$ConnectionCallbacks)
+    public abstract void registerConnectionFailedListener(com.google.android.gms.common.GooglePlayServicesClient$OnConnectionFailedListener)
+    public abstract boolean isConnectionFailedListenerRegistered(com.google.android.gms.common.GooglePlayServicesClient$OnConnectionFailedListener)
+    public abstract void unregisterConnectionFailedListener(com.google.android.gms.common.GooglePlayServicesClient$OnConnectionFailedListener)
+com.google.android.gms.common.GooglePlayServicesNotAvailableException
+com.google.android.gms.common.GooglePlayServicesUtil:
+    public static final int GOOGLE_PLAY_SERVICES_VERSION_CODE
+    public static final java.lang.String GOOGLE_PLAY_SERVICES_PACKAGE
+    public static final java.lang.String GOOGLE_PLAY_STORE_PACKAGE
+    private GooglePlayServicesUtil()
+    public static java.lang.String getErrorString(int)
+    public static android.content.Intent a(android.content.Context,int,int)
+    static boolean b(int)
+    private static int c(int)
+    private static boolean f()
+    private static boolean c(android.content.Context)
+    public static java.lang.String b(android.content.Context,int,int)
+    public static java.lang.String a(android.content.Context,int)
+    public static android.app.Dialog getErrorDialog(int,android.app.Activity,int)
+    public static android.app.PendingIntent getErrorPendingIntent(int,android.content.Context,int)
+    public static android.app.Dialog getErrorDialog(int,android.app.Activity,int,android.content.DialogInterface$OnCancelListener)
+    public static android.app.Dialog a(int,android.app.Activity,int,android.content.DialogInterface$OnCancelListener,int)
+    public static boolean isUserRecoverableError(int)
+    public static java.lang.String getOpenSourceSoftwareLicenseInfo(android.content.Context)
+    public static boolean a(android.content.res.Resources)
+    private static boolean b(android.content.res.Resources)
+    public static android.content.res.Resources getRemoteResource(android.content.Context)
+    public static android.content.Context getRemoteContext(android.content.Context)
+com.google.android.gms.common.Scopes
+com.google.android.gms.common.SignInButton
+com.google.android.gms.common.data.DataBuffer
+com.google.android.gms.common.data.DataBufferUtils
+com.google.android.gms.common.images.ImageManager:
+    private static com.google.android.gms.common.images.ImageManager ai
+    private final java.util.Map ak
+    public static com.google.android.gms.common.images.ImageManager create(android.content.Context)
+    private ImageManager(android.content.Context)
+    public void loadImage(android.widget.ImageView,android.net.Uri)
+    public void loadImage(android.widget.ImageView,int)
+    public void loadImage(android.widget.ImageView,android.net.Uri,int)
+    public void loadImage(com.google.android.gms.common.images.ImageManager$OnImageLoadedListener,android.net.Uri)
+    public void loadImage(com.google.android.gms.common.images.ImageManager$OnImageLoadedListener,android.net.Uri,int)
+    private void a(com.google.android.gms.common.images.ImageManager$ListenerHolder,android.net.Uri)
+    static synthetic java.util.Map d(com.google.android.gms.common.images.ImageManager)
+com.google.android.gms.common.images.ImageManager$1
+com.google.android.gms.common.images.ImageManager$ImageReceiver:
+    ImageManager$ImageReceiver(com.google.android.gms.common.images.ImageManager,android.net.Uri)
+    public void addOnImageLoadedListenerHolder(com.google.android.gms.common.images.ImageManager$ListenerHolder)
+    public void removeOnImageLoadedListenerHolder(com.google.android.gms.common.images.ImageManager$ListenerHolder)
+    public android.net.Uri getUri()
+com.google.android.gms.common.images.ImageManager$ListenerHolder:
+    protected final int mDefaultResId
+    final synthetic com.google.android.gms.common.images.ImageManager an
+    private ImageManager$ListenerHolder(com.google.android.gms.common.images.ImageManager,int,int)
+    public abstract void handleCachedDrawable(android.net.Uri,android.graphics.drawable.Drawable)
+    public abstract boolean shouldLoadImage(android.net.Uri)
+    synthetic ImageManager$ListenerHolder(com.google.android.gms.common.images.ImageManager,int,int,com.google.android.gms.common.images.ImageManager$1)
+com.google.android.gms.common.images.ImageManager$OnImageLoadedListener
+com.google.android.gms.common.images.ImageManager$a
+com.google.android.gms.common.images.ImageManager$b
+com.google.android.gms.common.images.ImageManager$c
+com.google.android.gms.dynamic.LifecycleDelegate
+com.google.android.gms.games.Game:
+    public abstract void getDisplayName(android.database.CharArrayBuffer)
+    public abstract void getDescription(android.database.CharArrayBuffer)
+    public abstract void getDeveloperName(android.database.CharArrayBuffer)
+com.google.android.gms.games.GameBuffer
+com.google.android.gms.games.GameEntity:
+    public void getDisplayName(android.database.CharArrayBuffer)
+    public void getDescription(android.database.CharArrayBuffer)
+    public void getDeveloperName(android.database.CharArrayBuffer)
+com.google.android.gms.games.GamesActivityResultCodes
+com.google.android.gms.games.GamesClient
+com.google.android.gms.games.GamesClient$1
+com.google.android.gms.games.GamesClient$Builder
+com.google.android.gms.games.GamesClientSettings
+com.google.android.gms.games.OnGamesLoadedListener
+com.google.android.gms.games.OnPlayersLoadedListener
+com.google.android.gms.games.OnSignOutCompleteListener
+com.google.android.gms.games.PageDirection
+com.google.android.gms.games.Player:
+    public abstract void getDisplayName(android.database.CharArrayBuffer)
+    public abstract boolean hasIconImage()
+    public abstract boolean hasHiResImage()
+com.google.android.gms.games.PlayerBuffer
+com.google.android.gms.games.PlayerEntity:
+    public void getDisplayName(android.database.CharArrayBuffer)
+    public boolean hasIconImage()
+    public boolean hasHiResImage()
+com.google.android.gms.games.RealTimeSocket
+com.google.android.gms.games.achievement.Achievement
+com.google.android.gms.games.achievement.AchievementBuffer
+com.google.android.gms.games.achievement.OnAchievementUpdatedListener
+com.google.android.gms.games.achievement.OnAchievementsLoadedListener
+com.google.android.gms.games.leaderboard.Leaderboard
+com.google.android.gms.games.leaderboard.LeaderboardBuffer
+com.google.android.gms.games.leaderboard.LeaderboardScore
+com.google.android.gms.games.leaderboard.LeaderboardScoreBuffer
+com.google.android.gms.games.leaderboard.LeaderboardVariant
+com.google.android.gms.games.leaderboard.OnLeaderboardMetadataLoadedListener
+com.google.android.gms.games.leaderboard.OnLeaderboardScoresLoadedListener
+com.google.android.gms.games.leaderboard.OnScoreSubmittedListener
+com.google.android.gms.games.leaderboard.SubmitScoreResult
+com.google.android.gms.games.leaderboard.SubmitScoreResult$Result
+com.google.android.gms.games.multiplayer.InvitationBuffer
+com.google.android.gms.games.multiplayer.OnInvitationReceivedListener
+com.google.android.gms.games.multiplayer.OnInvitationsLoadedListener
+com.google.android.gms.games.multiplayer.Participant:
+    public static final int STATUS_INVITED
+    public static final int STATUS_JOINED
+    public static final int STATUS_DECLINED
+    public static final int STATUS_LEFT
+    public abstract void getDisplayName(android.database.CharArrayBuffer)
+com.google.android.gms.games.multiplayer.ParticipantBuffer
+com.google.android.gms.games.multiplayer.ParticipantEntity:
+    public void getDisplayName(android.database.CharArrayBuffer)
+com.google.android.gms.games.multiplayer.ParticipantUtils
+com.google.android.gms.games.multiplayer.realtime.RealTimeMessage:
+    public static final int UNRELIABLE
+    public static final int RELIABLE
+    public java.lang.String getSenderParticipantId()
+    public byte[] getMessageData()
+    public boolean isReliable()
+com.google.android.gms.games.multiplayer.realtime.RealTimeMessageReceivedListener
+com.google.android.gms.games.multiplayer.realtime.RealTimeReliableMessageSentListener
+com.google.android.gms.games.multiplayer.realtime.Room:
+    public static final int ROOM_VARIANT_ANY
+    public static final int ROOM_STATUS_INVITING
+    public static final int ROOM_STATUS_AUTO_MATCHING
+    public static final int ROOM_STATUS_CONNECTING
+    public static final int ROOM_STATUS_ACTIVE
+    public abstract void getDescription(android.database.CharArrayBuffer)
+    public abstract int getParticipantStatus(java.lang.String)
+    public abstract java.util.ArrayList getParticipantIds()
+    public abstract java.lang.String getParticipantId(java.lang.String)
+com.google.android.gms.games.multiplayer.realtime.RoomConfig:
+    private final com.google.android.gms.games.multiplayer.realtime.RoomUpdateListener dU
+    private final com.google.android.gms.games.multiplayer.realtime.RoomStatusUpdateListener dV
+    private final com.google.android.gms.games.multiplayer.realtime.RealTimeMessageReceivedListener dW
+    private final java.lang.String dF
+    private final int dX
+    private final java.lang.String[] dY
+    private final android.os.Bundle dZ
+    private final boolean ea
+    private RoomConfig(com.google.android.gms.games.multiplayer.realtime.RoomConfig$Builder)
+    public com.google.android.gms.games.multiplayer.realtime.RoomUpdateListener getRoomUpdateListener()
+    public java.lang.String getInvitationId()
+    public com.google.android.gms.games.multiplayer.realtime.RoomStatusUpdateListener getRoomStatusUpdateListener()
+    public com.google.android.gms.games.multiplayer.realtime.RealTimeMessageReceivedListener getMessageReceivedListener()
+    public int getVariant()
+    public java.lang.String[] getInvitedPlayerIds()
+    public android.os.Bundle getAutoMatchCriteria()
+    public boolean isSocketEnabled()
+    public static com.google.android.gms.games.multiplayer.realtime.RoomConfig$Builder builder(com.google.android.gms.games.multiplayer.realtime.RoomUpdateListener)
+    synthetic RoomConfig(com.google.android.gms.games.multiplayer.realtime.RoomConfig$Builder,com.google.android.gms.games.multiplayer.realtime.RoomConfig$1)
+com.google.android.gms.games.multiplayer.realtime.RoomConfig$1
+com.google.android.gms.games.multiplayer.realtime.RoomConfig$Builder
+com.google.android.gms.games.multiplayer.realtime.RoomEntity:
+    public int getParticipantStatus(java.lang.String)
+    public void getDescription(android.database.CharArrayBuffer)
+    public java.util.ArrayList getParticipantIds()
+    public java.lang.String getParticipantId(java.lang.String)
+com.google.android.gms.games.multiplayer.realtime.RoomStatusUpdateListener
+com.google.android.gms.games.multiplayer.realtime.RoomUpdateListener
+com.google.android.gms.gcm.GoogleCloudMessaging
+com.google.android.gms.gcm.GoogleCloudMessaging$1
+com.google.android.gms.internal.a
+com.google.android.gms.internal.a$a
+com.google.android.gms.internal.a$a$a
+com.google.android.gms.internal.aa
+com.google.android.gms.internal.af:
+    private int be
+    public af(int)
+    public final java.lang.Object get(java.lang.Object)
+    protected java.lang.Object create(java.lang.Object)
+    public final void evictAll()
+    public final synchronized int size()
+com.google.android.gms.internal.an$a:
+    public com.google.android.gms.internal.an$a J()
+com.google.android.gms.internal.aq:
+    public void U()
+    public aq(java.lang.Class)
+    public void a(java.lang.Class,java.util.HashMap)
+    public boolean a(java.lang.Class)
+com.google.android.gms.internal.at:
+    private at(com.google.android.gms.internal.ae,com.google.android.gms.internal.aq,java.lang.String)
+    public static com.google.android.gms.internal.at a(com.google.android.gms.internal.an)
+    private static com.google.android.gms.internal.aq b(com.google.android.gms.internal.an)
+    private static void a(com.google.android.gms.internal.aq,com.google.android.gms.internal.an)
+    public com.google.android.gms.internal.ae a(android.os.Parcelable$Creator)
+com.google.android.gms.internal.av:
+    public static boolean a(java.lang.Object[],java.lang.Object)
+com.google.android.gms.internal.ax
+com.google.android.gms.internal.b
+com.google.android.gms.internal.ba
+com.google.android.gms.internal.bb
+com.google.android.gms.internal.bb$1
+com.google.android.gms.internal.bb$2
+com.google.android.gms.internal.bb$3
+com.google.android.gms.internal.bb$4
+com.google.android.gms.internal.bb$5
+com.google.android.gms.internal.bb$6
+com.google.android.gms.internal.bb$a
+com.google.android.gms.internal.bc$a:
+    public bc$a()
+com.google.android.gms.internal.bd
+com.google.android.gms.internal.be
+com.google.android.gms.internal.bf:
+    public bf(com.google.android.gms.internal.k,int)
+    public void getDisplayName(android.database.CharArrayBuffer)
+    public void getDescription(android.database.CharArrayBuffer)
+    public void getDeveloperName(android.database.CharArrayBuffer)
+com.google.android.gms.internal.bg:
+    public void getDisplayName(android.database.CharArrayBuffer)
+    public boolean hasIconImage()
+    public boolean hasHiResImage()
+com.google.android.gms.internal.bh
+com.google.android.gms.internal.bi
+com.google.android.gms.internal.bj
+com.google.android.gms.internal.bj$a
+com.google.android.gms.internal.bj$aa
+com.google.android.gms.internal.bj$ab
+com.google.android.gms.internal.bj$ac
+com.google.android.gms.internal.bj$ad
+com.google.android.gms.internal.bj$ae
+com.google.android.gms.internal.bj$af
+com.google.android.gms.internal.bj$ag
+com.google.android.gms.internal.bj$ah
+com.google.android.gms.internal.bj$ai
+com.google.android.gms.internal.bj$aj
+com.google.android.gms.internal.bj$ak
+com.google.android.gms.internal.bj$al
+com.google.android.gms.internal.bj$am
+com.google.android.gms.internal.bj$an
+com.google.android.gms.internal.bj$ao
+com.google.android.gms.internal.bj$ap
+com.google.android.gms.internal.bj$b
+com.google.android.gms.internal.bj$c
+com.google.android.gms.internal.bj$d
+com.google.android.gms.internal.bj$e
+com.google.android.gms.internal.bj$f
+com.google.android.gms.internal.bj$g
+com.google.android.gms.internal.bj$h
+com.google.android.gms.internal.bj$i
+com.google.android.gms.internal.bj$j
+com.google.android.gms.internal.bj$k
+com.google.android.gms.internal.bj$l
+com.google.android.gms.internal.bj$m
+com.google.android.gms.internal.bj$n
+com.google.android.gms.internal.bj$o
+com.google.android.gms.internal.bj$p
+com.google.android.gms.internal.bj$q
+com.google.android.gms.internal.bj$r
+com.google.android.gms.internal.bj$s
+com.google.android.gms.internal.bj$t
+com.google.android.gms.internal.bj$u
+com.google.android.gms.internal.bj$v
+com.google.android.gms.internal.bj$w
+com.google.android.gms.internal.bj$x
+com.google.android.gms.internal.bj$y
+com.google.android.gms.internal.bj$z
+com.google.android.gms.internal.bk
+com.google.android.gms.internal.bl
+com.google.android.gms.internal.bl$a
+com.google.android.gms.internal.bl$a$a
+com.google.android.gms.internal.bm
+com.google.android.gms.internal.bm$a
+com.google.android.gms.internal.bm$a$a
+com.google.android.gms.internal.bn
+com.google.android.gms.internal.bn$1
+com.google.android.gms.internal.bn$a
+com.google.android.gms.internal.bn$b
+com.google.android.gms.internal.bo
+com.google.android.gms.internal.bp
+com.google.android.gms.internal.bq
+com.google.android.gms.internal.br
+com.google.android.gms.internal.bs
+com.google.android.gms.internal.bt
+com.google.android.gms.internal.bu
+com.google.android.gms.internal.bv
+com.google.android.gms.internal.bw:
+    public bw(com.google.android.gms.internal.k,int,int)
+com.google.android.gms.internal.bx:
+    public void getDisplayName(android.database.CharArrayBuffer)
+com.google.android.gms.internal.by
+com.google.android.gms.internal.bz:
+    bz(com.google.android.gms.internal.k,int,int)
+    public int getParticipantStatus(java.lang.String)
+    public void getDescription(android.database.CharArrayBuffer)
+    public java.util.ArrayList getParticipantIds()
+    public java.lang.String getParticipantId(java.lang.String)
+com.google.android.gms.internal.c
+com.google.android.gms.internal.ca
+com.google.android.gms.internal.ca$a
+com.google.android.gms.internal.ca$a$a
+com.google.android.gms.internal.cb
+com.google.android.gms.internal.cb$a
+com.google.android.gms.internal.cb$a$a
+com.google.android.gms.internal.cc
+com.google.android.gms.internal.cc$a
+com.google.android.gms.internal.cc$a$a
+com.google.android.gms.internal.cd
+com.google.android.gms.internal.cd$a
+com.google.android.gms.internal.cd$b
+com.google.android.gms.internal.ce
+com.google.android.gms.internal.ce$1
+com.google.android.gms.internal.ce$a
+com.google.android.gms.internal.ce$b
+com.google.android.gms.internal.ce$c
+com.google.android.gms.internal.ce$d
+com.google.android.gms.internal.cf:
+    public cf(java.lang.String,int,short,double,double,float,long)
+    public static com.google.android.gms.internal.cf c(byte[])
+com.google.android.gms.internal.ch
+com.google.android.gms.internal.ck
+com.google.android.gms.internal.ck$a
+com.google.android.gms.internal.ck$a$a
+com.google.android.gms.internal.cl
+com.google.android.gms.internal.cl$a
+com.google.android.gms.internal.cl$a$a
+com.google.android.gms.internal.cm
+com.google.android.gms.internal.cm$a
+com.google.android.gms.internal.cm$a$a
+com.google.android.gms.internal.cn
+com.google.android.gms.internal.cn$a
+com.google.android.gms.internal.cn$a$a
+com.google.android.gms.internal.co
+com.google.android.gms.internal.co$a
+com.google.android.gms.internal.co$a$a
+com.google.android.gms.internal.cp
+com.google.android.gms.internal.cp$a
+com.google.android.gms.internal.cp$a$a
+com.google.android.gms.internal.cq
+com.google.android.gms.internal.cq$a
+com.google.android.gms.internal.cq$a$a
+com.google.android.gms.internal.cr
+com.google.android.gms.internal.cr$a
+com.google.android.gms.internal.cr$a$a
+com.google.android.gms.internal.cs
+com.google.android.gms.internal.cs$a
+com.google.android.gms.internal.cs$a$a
+com.google.android.gms.internal.ct
+com.google.android.gms.internal.ct$a
+com.google.android.gms.internal.ct$a$a
+com.google.android.gms.internal.cu
+com.google.android.gms.internal.cu$a
+com.google.android.gms.internal.cu$a$a
+com.google.android.gms.internal.cv
+com.google.android.gms.internal.cw
+com.google.android.gms.internal.d
+com.google.android.gms.internal.dj
+com.google.android.gms.internal.dj$a
+com.google.android.gms.internal.dj$a$a
+com.google.android.gms.internal.dk
+com.google.android.gms.internal.dk$a
+com.google.android.gms.internal.dk$a$a
+com.google.android.gms.internal.dl
+com.google.android.gms.internal.dl$a
+com.google.android.gms.internal.dl$a$a
+com.google.android.gms.internal.dm
+com.google.android.gms.internal.dm$a
+com.google.android.gms.internal.dm$a$a
+com.google.android.gms.internal.dn
+com.google.android.gms.internal.dn$a
+com.google.android.gms.internal.dn$a$a
+com.google.android.gms.internal.do
+com.google.android.gms.internal.do$a
+com.google.android.gms.internal.do$a$a
+com.google.android.gms.internal.dp$a:
+    public dp$a()
+com.google.android.gms.internal.dq
+com.google.android.gms.internal.dq$a
+com.google.android.gms.internal.dq$a$a
+com.google.android.gms.internal.dr
+com.google.android.gms.internal.dr$a
+com.google.android.gms.internal.dr$a$a
+com.google.android.gms.internal.ds
+com.google.android.gms.internal.ds$a
+com.google.android.gms.internal.ds$b
+com.google.android.gms.internal.ds$c
+com.google.android.gms.internal.dt:
+    public void a(com.google.android.gms.plus.PlusClient)
+com.google.android.gms.internal.dy:
+    public void writeMoment(com.google.android.gms.plus.model.moments.Moment)
+    public void loadMoments(com.google.android.gms.plus.PlusClient$OnMomentsLoadedListener,int,java.lang.String,android.net.Uri,java.lang.String,java.lang.String)
+    public void removeMoment(java.lang.String)
+    public void loadPeople(com.google.android.gms.plus.PlusClient$OnPeopleLoadedListener,int,int,int,java.lang.String)
+    public void loadPerson(com.google.android.gms.plus.PlusClient$OnPersonLoadedListener,java.lang.String)
+    public com.google.android.gms.plus.model.people.Person getCurrentPerson()
+    public void clearDefaultAccount()
+    public void revokeAccessAndDisconnect(com.google.android.gms.plus.PlusClient$OnAccessRevokedListener)
+com.google.android.gms.internal.dy$a
+com.google.android.gms.internal.dy$b
+com.google.android.gms.internal.dy$e
+com.google.android.gms.internal.dy$f
+com.google.android.gms.internal.dy$g
+com.google.android.gms.internal.dy$h
+com.google.android.gms.internal.dy$l
+com.google.android.gms.internal.dy$m
+com.google.android.gms.internal.dz:
+    public void initialize(com.google.android.gms.plus.PlusClient,java.lang.String,int)
+com.google.android.gms.internal.e
+com.google.android.gms.internal.e$a
+com.google.android.gms.internal.e$b
+com.google.android.gms.internal.e$c
+com.google.android.gms.internal.e$d
+com.google.android.gms.internal.e$e
+com.google.android.gms.internal.e$f
+com.google.android.gms.internal.e$g
+com.google.android.gms.internal.e$h
+com.google.android.gms.internal.ed:
+    public ed(java.util.Set,com.google.android.gms.internal.ed,java.util.List,com.google.android.gms.internal.ed,java.lang.String,java.lang.String,java.lang.String,java.util.List,int,java.util.List,com.google.android.gms.internal.ed,java.util.List,java.lang.String,java.lang.String,com.google.android.gms.internal.ed,java.lang.String,java.lang.String,java.lang.String,java.util.List,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,com.google.android.gms.internal.ed,java.lang.String,java.lang.String,java.lang.String,java.lang.String,com.google.android.gms.internal.ed,double,com.google.android.gms.internal.ed,double,java.lang.String,com.google.android.gms.internal.ed,java.util.List,java.lang.String,java.lang.String,java.lang.String,java.lang.String,com.google.android.gms.internal.ed,java.lang.String,java.lang.String,java.lang.String,com.google.android.gms.internal.ed,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+    public com.google.android.gms.plus.model.moments.ItemScope getAbout()
+    public boolean hasAbout()
+    public boolean hasAdditionalName()
+    public com.google.android.gms.plus.model.moments.ItemScope getAddress()
+    public boolean hasAddress()
+    public boolean hasAddressCountry()
+    public boolean hasAddressLocality()
+    public boolean hasAddressRegion()
+    public java.util.List getAssociated_media()
+    public boolean hasAssociated_media()
+    public boolean hasAttendeeCount()
+    public java.util.List getAttendees()
+    public boolean hasAttendees()
+    public com.google.android.gms.plus.model.moments.ItemScope getAudio()
+    public boolean hasAudio()
+    public java.util.List getAuthor()
+    public boolean hasAuthor()
+    public boolean hasBestRating()
+    public boolean hasBirthDate()
+    public com.google.android.gms.plus.model.moments.ItemScope getByArtist()
+    public boolean hasByArtist()
+    public boolean hasCaption()
+    public boolean hasContentSize()
+    public boolean hasContentUrl()
+    public java.util.List getContributor()
+    public boolean hasContributor()
+    public boolean hasDateCreated()
+    public boolean hasDateModified()
+    public boolean hasDatePublished()
+    public boolean hasDescription()
+    public boolean hasDuration()
+    public boolean hasEmbedUrl()
+    public boolean hasEndDate()
+    public boolean hasFamilyName()
+    public boolean hasGender()
+    public com.google.android.gms.plus.model.moments.ItemScope getGeo()
+    public boolean hasGeo()
+    public boolean hasGivenName()
+    public boolean hasHeight()
+    public boolean hasId()
+    public boolean hasImage()
+    public com.google.android.gms.plus.model.moments.ItemScope getInAlbum()
+    public boolean hasInAlbum()
+    public boolean hasLatitude()
+    public com.google.android.gms.plus.model.moments.ItemScope getLocation()
+    public boolean hasLocation()
+    public boolean hasLongitude()
+    public boolean hasName()
+    public com.google.android.gms.plus.model.moments.ItemScope getPartOfTVSeries()
+    public boolean hasPartOfTVSeries()
+    public java.util.List getPerformers()
+    public boolean hasPerformers()
+    public boolean hasPlayerType()
+    public boolean hasPostOfficeBoxNumber()
+    public boolean hasPostalCode()
+    public boolean hasRatingValue()
+    public com.google.android.gms.plus.model.moments.ItemScope getReviewRating()
+    public boolean hasReviewRating()
+    public boolean hasStartDate()
+    public boolean hasStreetAddress()
+    public boolean hasText()
+    public com.google.android.gms.plus.model.moments.ItemScope getThumbnail()
+    public boolean hasThumbnail()
+    public boolean hasThumbnailUrl()
+    public boolean hasTickerSymbol()
+    public boolean hasType()
+    public boolean hasUrl()
+    public boolean hasWidth()
+    public boolean hasWorstRating()
+com.google.android.gms.internal.ef:
+    public ef(java.util.Set,java.lang.String,com.google.android.gms.internal.ed,java.lang.String,com.google.android.gms.internal.ed,java.lang.String)
+    public boolean hasId()
+    public com.google.android.gms.plus.model.moments.ItemScope getResult()
+    public boolean hasResult()
+    public boolean hasStartDate()
+    public com.google.android.gms.plus.model.moments.ItemScope getTarget()
+    public boolean hasTarget()
+    public boolean hasType()
+com.google.android.gms.internal.eh
+com.google.android.gms.internal.eq:
+    public eq(java.lang.String,java.lang.String,com.google.android.gms.internal.eq$d,int,java.lang.String)
+    public boolean hasAboutMe()
+    public com.google.android.gms.plus.model.people.Person$AgeRange getAgeRange()
+    public boolean hasAgeRange()
+    public boolean hasBirthday()
+    public boolean hasBraggingRights()
+    public boolean hasCircledByCount()
+    public com.google.android.gms.plus.model.people.Person$Cover getCover()
+    public boolean hasCover()
+    public boolean hasCurrentLocation()
+    public boolean hasDisplayName()
+    public java.util.List getEmails()
+    public boolean hasEmails()
+    public boolean hasGender()
+    public boolean hasHasApp()
+    public boolean hasId()
+    public com.google.android.gms.plus.model.people.Person$Image getImage()
+    public boolean hasImage()
+    public boolean hasIsPlusUser()
+    public boolean hasLanguage()
+    public com.google.android.gms.plus.model.people.Person$Name getName()
+    public boolean hasName()
+    public boolean hasNickname()
+    public boolean hasObjectType()
+    public java.util.List getOrganizations()
+    public boolean hasOrganizations()
+    public java.util.List getPlacesLived()
+    public boolean hasPlacesLived()
+    public boolean hasPlusOneCount()
+    public boolean hasRelationshipStatus()
+    public boolean hasTagline()
+    public boolean hasUrl()
+    public java.util.List getUrls()
+    public boolean hasUrls()
+    public boolean hasVerified()
+com.google.android.gms.internal.eq$a:
+    public boolean hasMax()
+    public boolean hasMin()
+com.google.android.gms.internal.eq$b:
+    public com.google.android.gms.plus.model.people.Person$Cover$CoverInfo getCoverInfo()
+    public boolean hasCoverInfo()
+    public com.google.android.gms.plus.model.people.Person$Cover$CoverPhoto getCoverPhoto()
+    public boolean hasCoverPhoto()
+    public boolean hasLayout()
+com.google.android.gms.internal.eq$b$a:
+    public boolean hasLeftImageOffset()
+    public boolean hasTopImageOffset()
+com.google.android.gms.internal.eq$b$b:
+    public boolean hasHeight()
+    public boolean hasUrl()
+    public boolean hasWidth()
+com.google.android.gms.internal.eq$c:
+    public boolean hasPrimary()
+    public boolean hasType()
+    public boolean hasValue()
+com.google.android.gms.internal.eq$d:
+    public eq$d(java.lang.String)
+    public boolean hasUrl()
+com.google.android.gms.internal.eq$e:
+    public boolean hasFamilyName()
+    public boolean hasFormatted()
+    public boolean hasGivenName()
+    public boolean hasHonorificPrefix()
+    public boolean hasHonorificSuffix()
+    public boolean hasMiddleName()
+com.google.android.gms.internal.eq$f
+com.google.android.gms.internal.eq$g:
+    public boolean hasDepartment()
+    public boolean hasDescription()
+    public boolean hasEndDate()
+    public boolean hasLocation()
+    public boolean hasName()
+    public boolean hasPrimary()
+    public boolean hasStartDate()
+    public boolean hasTitle()
+    public boolean hasType()
+com.google.android.gms.internal.eq$h:
+    public boolean hasPrimary()
+    public boolean hasValue()
+com.google.android.gms.internal.eq$i:
+    public boolean hasPrimary()
+    public boolean hasType()
+    public boolean hasValue()
+com.google.android.gms.internal.es
+com.google.android.gms.internal.f
+com.google.android.gms.internal.f$a
+com.google.android.gms.internal.f$a$a
+com.google.android.gms.internal.g
+com.google.android.gms.internal.g$a
+com.google.android.gms.internal.g$a$a
+com.google.android.gms.internal.h
+com.google.android.gms.internal.i
+com.google.android.gms.internal.j:
+    protected byte[] getByteArray(java.lang.String)
+    protected void a(java.lang.String,android.database.CharArrayBuffer)
+com.google.android.gms.internal.k:
+    public k(java.lang.String[],android.database.CursorWindow[],int,android.os.Bundle)
+    private k(com.google.android.gms.internal.k$a,int,android.os.Bundle)
+    public int getStatusCode()
+    public android.os.Bundle h()
+    private static android.database.CursorWindow[] a(com.google.android.gms.internal.k$a)
+    public byte[] e(java.lang.String,int,int)
+    public void a(java.lang.String,int,int,android.database.CharArrayBuffer)
+    public void close()
+    public static com.google.android.gms.internal.k e(int)
+    public static com.google.android.gms.internal.k a(int,android.os.Bundle)
+com.google.android.gms.internal.k$a:
+    static synthetic java.lang.String[] b(com.google.android.gms.internal.k$a)
+    static synthetic java.util.ArrayList c(com.google.android.gms.internal.k$a)
+com.google.android.gms.internal.m
+com.google.android.gms.internal.n:
+    public static void a(boolean,java.lang.Object)
+com.google.android.gms.internal.o
+com.google.android.gms.internal.p:
+    public boolean isConnecting()
+    public final android.content.Context getContext()
+com.google.android.gms.internal.p$c
+com.google.android.gms.internal.r
+com.google.android.gms.internal.s
+com.google.android.gms.internal.v
+com.google.android.gms.internal.v$a
+com.google.android.gms.internal.v$a$a
+com.google.android.gms.internal.x:
+    public static void c(boolean)
+com.google.android.gms.internal.z
+com.google.android.gms.internal.z$a
+com.google.android.gms.location.ActivityRecognitionClient
+com.google.android.gms.location.ActivityRecognitionResult:
+    public static final java.lang.String EXTRA_ACTIVITY_RESULT
+    public ActivityRecognitionResult(java.util.List,long,long)
+    public ActivityRecognitionResult(com.google.android.gms.location.DetectedActivity,long,long)
+    public static boolean hasResult(android.content.Intent)
+    public static com.google.android.gms.location.ActivityRecognitionResult extractResult(android.content.Intent)
+    public com.google.android.gms.location.DetectedActivity getMostProbableActivity()
+    public int getActivityConfidence(int)
+    public java.util.List getProbableActivities()
+    public long getTime()
+    public long getElapsedRealtimeMillis()
+com.google.android.gms.location.ActivityRecognitionResultCreator:
+    public static final int CONTENT_DESCRIPTION
+com.google.android.gms.location.DetectedActivity:
+    public static final int IN_VEHICLE
+    public static final int ON_BICYCLE
+    public static final int ON_FOOT
+    public static final int STILL
+    public static final int UNKNOWN
+    public static final int TILTING
+    public DetectedActivity(int,int)
+    public int getConfidence()
+com.google.android.gms.location.DetectedActivityCreator:
+    public static final int CONTENT_DESCRIPTION
+com.google.android.gms.location.Geofence
+com.google.android.gms.location.Geofence$Builder
+com.google.android.gms.location.LocationClient
+com.google.android.gms.location.LocationClient$OnAddGeofencesResultListener
+com.google.android.gms.location.LocationClient$OnRemoveGeofencesResultListener
+com.google.android.gms.location.LocationListener
+com.google.android.gms.location.LocationRequest:
+    public static final int PRIORITY_HIGH_ACCURACY
+    public static final int PRIORITY_BALANCED_POWER_ACCURACY
+    public static final int PRIORITY_NO_POWER
+    public static com.google.android.gms.location.LocationRequest create()
+    public com.google.android.gms.location.LocationRequest setPriority(int)
+    public int getPriority()
+    public com.google.android.gms.location.LocationRequest setInterval(long)
+    public long getInterval()
+    public com.google.android.gms.location.LocationRequest setFastestInterval(long)
+    public long getFastestInterval()
+    public com.google.android.gms.location.LocationRequest setExpirationDuration(long)
+    public com.google.android.gms.location.LocationRequest setExpirationTime(long)
+    public long getExpirationTime()
+    public com.google.android.gms.location.LocationRequest setNumUpdates(int)
+    public int getNumUpdates()
+    public com.google.android.gms.location.LocationRequest setSmallestDisplacement(float)
+    public float getSmallestDisplacement()
+    private static void c(long)
+    private static void H(int)
+    private static void a(float)
+com.google.android.gms.location.LocationRequestCreator:
+    public static final int CONTENT_DESCRIPTION
+com.google.android.gms.location.LocationStatusCodes
+com.google.android.gms.maps.CameraUpdate
+com.google.android.gms.maps.CameraUpdateFactory
+com.google.android.gms.maps.GoogleMap
+com.google.android.gms.maps.GoogleMap$1
+com.google.android.gms.maps.GoogleMap$1$1
+com.google.android.gms.maps.GoogleMap$2
+com.google.android.gms.maps.GoogleMap$3
+com.google.android.gms.maps.GoogleMap$4
+com.google.android.gms.maps.GoogleMap$5
+com.google.android.gms.maps.GoogleMap$6
+com.google.android.gms.maps.GoogleMap$7
+com.google.android.gms.maps.GoogleMap$8
+com.google.android.gms.maps.GoogleMap$9
+com.google.android.gms.maps.GoogleMap$CancelableCallback
+com.google.android.gms.maps.GoogleMap$InfoWindowAdapter
+com.google.android.gms.maps.GoogleMap$OnCameraChangeListener
+com.google.android.gms.maps.GoogleMap$OnInfoWindowClickListener
+com.google.android.gms.maps.GoogleMap$OnMapClickListener
+com.google.android.gms.maps.GoogleMap$OnMapLongClickListener
+com.google.android.gms.maps.GoogleMap$OnMarkerClickListener
+com.google.android.gms.maps.GoogleMap$OnMarkerDragListener
+com.google.android.gms.maps.GoogleMap$OnMyLocationChangeListener
+com.google.android.gms.maps.GoogleMap$a
+com.google.android.gms.maps.GoogleMapOptions:
+    public com.google.android.gms.maps.GoogleMapOptions zOrderOnTop(boolean)
+    public com.google.android.gms.maps.GoogleMapOptions useViewLifecycleInFragment(boolean)
+    public com.google.android.gms.maps.GoogleMapOptions mapType(int)
+    public com.google.android.gms.maps.GoogleMapOptions camera(com.google.android.gms.maps.model.CameraPosition)
+    public com.google.android.gms.maps.GoogleMapOptions zoomControlsEnabled(boolean)
+    public com.google.android.gms.maps.GoogleMapOptions compassEnabled(boolean)
+    public com.google.android.gms.maps.GoogleMapOptions scrollGesturesEnabled(boolean)
+    public com.google.android.gms.maps.GoogleMapOptions zoomGesturesEnabled(boolean)
+    public com.google.android.gms.maps.GoogleMapOptions tiltGesturesEnabled(boolean)
+    public com.google.android.gms.maps.GoogleMapOptions rotateGesturesEnabled(boolean)
+    public java.lang.Boolean getZOrderOnTop()
+    public java.lang.Boolean getUseViewLifecycleInFragment()
+    public java.lang.Boolean getZoomControlsEnabled()
+    public java.lang.Boolean getCompassEnabled()
+    public java.lang.Boolean getScrollGesturesEnabled()
+    public java.lang.Boolean getZoomGesturesEnabled()
+    public java.lang.Boolean getTiltGesturesEnabled()
+    public java.lang.Boolean getRotateGesturesEnabled()
+    public static com.google.android.gms.maps.GoogleMapOptions createFromAttributes(android.content.Context,android.util.AttributeSet)
+com.google.android.gms.maps.GoogleMapOptionsCreator:
+    public static final int CONTENT_DESCRIPTION
+com.google.android.gms.maps.LocationSource
+com.google.android.gms.maps.LocationSource$OnLocationChangedListener
+com.google.android.gms.maps.MapFragment
+com.google.android.gms.maps.MapFragment$a
+com.google.android.gms.maps.MapFragment$b
+com.google.android.gms.maps.MapView
+com.google.android.gms.maps.MapView$a
+com.google.android.gms.maps.MapView$b
+com.google.android.gms.maps.MapsInitializer
+com.google.android.gms.maps.Projection
+com.google.android.gms.maps.SupportMapFragment
+com.google.android.gms.maps.SupportMapFragment$a
+com.google.android.gms.maps.SupportMapFragment$b
+com.google.android.gms.maps.UiSettings
+com.google.android.gms.maps.internal.ICameraUpdateFactoryDelegate
+com.google.android.gms.maps.internal.ICameraUpdateFactoryDelegate$a
+com.google.android.gms.maps.internal.ICameraUpdateFactoryDelegate$a$a
+com.google.android.gms.maps.internal.IGoogleMapDelegate
+com.google.android.gms.maps.internal.IGoogleMapDelegate$a
+com.google.android.gms.maps.internal.IGoogleMapDelegate$a$a
+com.google.android.gms.maps.internal.ILocationSourceDelegate
+com.google.android.gms.maps.internal.ILocationSourceDelegate$a
+com.google.android.gms.maps.internal.ILocationSourceDelegate$a$a
+com.google.android.gms.maps.internal.IMapFragmentDelegate
+com.google.android.gms.maps.internal.IMapFragmentDelegate$a
+com.google.android.gms.maps.internal.IMapFragmentDelegate$a$a
+com.google.android.gms.maps.internal.IMapViewDelegate
+com.google.android.gms.maps.internal.IMapViewDelegate$a
+com.google.android.gms.maps.internal.IMapViewDelegate$a$a
+com.google.android.gms.maps.internal.IProjectionDelegate
+com.google.android.gms.maps.internal.IProjectionDelegate$a
+com.google.android.gms.maps.internal.IProjectionDelegate$a$a
+com.google.android.gms.maps.internal.IUiSettingsDelegate
+com.google.android.gms.maps.internal.IUiSettingsDelegate$a
+com.google.android.gms.maps.internal.IUiSettingsDelegate$a$a
+com.google.android.gms.maps.model.BitmapDescriptorFactory
+com.google.android.gms.maps.model.CameraPosition:
+    public CameraPosition(com.google.android.gms.maps.model.LatLng,float,float,float)
+    public static final com.google.android.gms.maps.model.CameraPosition fromLatLngZoom(com.google.android.gms.maps.model.LatLng,float)
+    public static com.google.android.gms.maps.model.CameraPosition$Builder builder()
+    public static com.google.android.gms.maps.model.CameraPosition$Builder builder(com.google.android.gms.maps.model.CameraPosition)
+    public static com.google.android.gms.maps.model.CameraPosition createFromAttributes(android.content.Context,android.util.AttributeSet)
+com.google.android.gms.maps.model.CameraPosition$Builder
+com.google.android.gms.maps.model.CameraPositionCreator:
+    public static final int CONTENT_DESCRIPTION
+com.google.android.gms.maps.model.Circle
+com.google.android.gms.maps.model.CircleOptions:
+    public com.google.android.gms.maps.model.CircleOptions center(com.google.android.gms.maps.model.LatLng)
+    public com.google.android.gms.maps.model.CircleOptions radius(double)
+    public com.google.android.gms.maps.model.CircleOptions strokeWidth(float)
+    public com.google.android.gms.maps.model.CircleOptions strokeColor(int)
+    public com.google.android.gms.maps.model.CircleOptions fillColor(int)
+    public com.google.android.gms.maps.model.CircleOptions zIndex(float)
+    public com.google.android.gms.maps.model.CircleOptions visible(boolean)
+com.google.android.gms.maps.model.CircleOptionsCreator:
+    public static final int CONTENT_DESCRIPTION
+com.google.android.gms.maps.model.GroundOverlay
+com.google.android.gms.maps.model.GroundOverlayOptions:
+    public static final float NO_DIMENSION
+    public com.google.android.gms.maps.model.GroundOverlayOptions image(com.google.android.gms.maps.model.BitmapDescriptor)
+    public com.google.android.gms.maps.model.GroundOverlayOptions anchor(float,float)
+    public com.google.android.gms.maps.model.GroundOverlayOptions position(com.google.android.gms.maps.model.LatLng,float)
+    public com.google.android.gms.maps.model.GroundOverlayOptions position(com.google.android.gms.maps.model.LatLng,float,float)
+    private com.google.android.gms.maps.model.GroundOverlayOptions a(com.google.android.gms.maps.model.LatLng,float,float)
+    public com.google.android.gms.maps.model.GroundOverlayOptions positionFromBounds(com.google.android.gms.maps.model.LatLngBounds)
+    public com.google.android.gms.maps.model.GroundOverlayOptions bearing(float)
+    public com.google.android.gms.maps.model.GroundOverlayOptions zIndex(float)
+    public com.google.android.gms.maps.model.GroundOverlayOptions visible(boolean)
+    public com.google.android.gms.maps.model.GroundOverlayOptions transparency(float)
+    public com.google.android.gms.maps.model.BitmapDescriptor getImage()
+com.google.android.gms.maps.model.GroundOverlayOptionsCreator:
+    public static final int CONTENT_DESCRIPTION
+com.google.android.gms.maps.model.LatLng:
+    public LatLng(double,double)
+com.google.android.gms.maps.model.LatLngBounds:
+    public LatLngBounds(com.google.android.gms.maps.model.LatLng,com.google.android.gms.maps.model.LatLng)
+    public static com.google.android.gms.maps.model.LatLngBounds$Builder builder()
+    public boolean contains(com.google.android.gms.maps.model.LatLng)
+    public com.google.android.gms.maps.model.LatLngBounds including(com.google.android.gms.maps.model.LatLng)
+    private static double b(double,double)
+    private static double c(double,double)
+    private boolean a(double)
+    private boolean b(double)
+    static synthetic double d(double,double)
+    static synthetic double e(double,double)
+com.google.android.gms.maps.model.LatLngBounds$Builder
+com.google.android.gms.maps.model.LatLngBoundsCreator:
+    public static final int CONTENT_DESCRIPTION
+com.google.android.gms.maps.model.LatLngCreator:
+    public static final int CONTENT_DESCRIPTION
+com.google.android.gms.maps.model.Marker
+com.google.android.gms.maps.model.MarkerOptions:
+    public com.google.android.gms.maps.model.MarkerOptions position(com.google.android.gms.maps.model.LatLng)
+    public com.google.android.gms.maps.model.MarkerOptions icon(com.google.android.gms.maps.model.BitmapDescriptor)
+    public com.google.android.gms.maps.model.MarkerOptions anchor(float,float)
+    public com.google.android.gms.maps.model.MarkerOptions title(java.lang.String)
+    public com.google.android.gms.maps.model.MarkerOptions snippet(java.lang.String)
+    public com.google.android.gms.maps.model.MarkerOptions draggable(boolean)
+    public com.google.android.gms.maps.model.MarkerOptions visible(boolean)
+    public com.google.android.gms.maps.model.BitmapDescriptor getIcon()
+com.google.android.gms.maps.model.MarkerOptionsCreator:
+    public static final int CONTENT_DESCRIPTION
+com.google.android.gms.maps.model.Polygon
+com.google.android.gms.maps.model.PolygonOptions:
+    public com.google.android.gms.maps.model.PolygonOptions add(com.google.android.gms.maps.model.LatLng)
+    public varargs com.google.android.gms.maps.model.PolygonOptions add(com.google.android.gms.maps.model.LatLng[])
+    public com.google.android.gms.maps.model.PolygonOptions addAll(java.lang.Iterable)
+    public com.google.android.gms.maps.model.PolygonOptions addHole(java.lang.Iterable)
+    public com.google.android.gms.maps.model.PolygonOptions strokeWidth(float)
+    public com.google.android.gms.maps.model.PolygonOptions strokeColor(int)
+    public com.google.android.gms.maps.model.PolygonOptions fillColor(int)
+    public com.google.android.gms.maps.model.PolygonOptions zIndex(float)
+    public com.google.android.gms.maps.model.PolygonOptions visible(boolean)
+    public com.google.android.gms.maps.model.PolygonOptions geodesic(boolean)
+    public java.util.List getHoles()
+com.google.android.gms.maps.model.PolygonOptionsCreator:
+    public static final int CONTENT_DESCRIPTION
+com.google.android.gms.maps.model.Polyline
+com.google.android.gms.maps.model.PolylineOptions:
+    public com.google.android.gms.maps.model.PolylineOptions add(com.google.android.gms.maps.model.LatLng)
+    public varargs com.google.android.gms.maps.model.PolylineOptions add(com.google.android.gms.maps.model.LatLng[])
+    public com.google.android.gms.maps.model.PolylineOptions addAll(java.lang.Iterable)
+    public com.google.android.gms.maps.model.PolylineOptions width(float)
+    public com.google.android.gms.maps.model.PolylineOptions color(int)
+    public com.google.android.gms.maps.model.PolylineOptions zIndex(float)
+    public com.google.android.gms.maps.model.PolylineOptions visible(boolean)
+    public com.google.android.gms.maps.model.PolylineOptions geodesic(boolean)
+com.google.android.gms.maps.model.PolylineOptionsCreator:
+    public static final int CONTENT_DESCRIPTION
+com.google.android.gms.maps.model.RuntimeRemoteException
+com.google.android.gms.maps.model.TileCreator:
+    public static final int CONTENT_DESCRIPTION
+com.google.android.gms.maps.model.TileOverlay
+com.google.android.gms.maps.model.TileOverlayOptions:
+    public com.google.android.gms.maps.model.TileOverlayOptions tileProvider(com.google.android.gms.maps.model.TileProvider)
+    public com.google.android.gms.maps.model.TileOverlayOptions zIndex(float)
+    public com.google.android.gms.maps.model.TileOverlayOptions visible(boolean)
+    public com.google.android.gms.maps.model.TileProvider getTileProvider()
+com.google.android.gms.maps.model.TileOverlayOptions$1:
+    public com.google.android.gms.maps.model.Tile getTile(int,int,int)
+com.google.android.gms.maps.model.TileOverlayOptions$2
+com.google.android.gms.maps.model.TileOverlayOptionsCreator:
+    public static final int CONTENT_DESCRIPTION
+com.google.android.gms.maps.model.TileProvider:
+    public abstract com.google.android.gms.maps.model.Tile getTile(int,int,int)
+com.google.android.gms.maps.model.UrlTileProvider
+com.google.android.gms.maps.model.VisibleRegion:
+    public VisibleRegion(com.google.android.gms.maps.model.LatLng,com.google.android.gms.maps.model.LatLng,com.google.android.gms.maps.model.LatLng,com.google.android.gms.maps.model.LatLng,com.google.android.gms.maps.model.LatLngBounds)
+com.google.android.gms.maps.model.VisibleRegionCreator:
+    public static final int CONTENT_DESCRIPTION
+com.google.android.gms.maps.model.internal.IPolylineDelegate
+com.google.android.gms.maps.model.internal.IPolylineDelegate$a
+com.google.android.gms.maps.model.internal.IPolylineDelegate$a$a
+com.google.android.gms.panorama.PanoramaClient
+com.google.android.gms.panorama.PanoramaClient$OnPanoramaInfoLoadedListener
+com.google.android.gms.panorama.PanoramaClient$a
+com.google.android.gms.plus.GooglePlusUtil
+com.google.android.gms.plus.PlusClient:
+    public static final java.lang.String KEY_REQUEST_VISIBLE_ACTIVITIES
+    public boolean A(java.lang.String)
+    public void writeMoment(com.google.android.gms.plus.model.moments.Moment)
+    public void loadMoments(com.google.android.gms.plus.PlusClient$OnMomentsLoadedListener)
+    public void loadMoments(com.google.android.gms.plus.PlusClient$OnMomentsLoadedListener,int,java.lang.String,android.net.Uri,java.lang.String,java.lang.String)
+    public void removeMoment(java.lang.String)
+    public void loadPeople(com.google.android.gms.plus.PlusClient$OnPeopleLoadedListener,int)
+    public void loadPeople(com.google.android.gms.plus.PlusClient$OnPeopleLoadedListener,int,int,int,java.lang.String)
+    public void loadPerson(com.google.android.gms.plus.PlusClient$OnPersonLoadedListener,java.lang.String)
+    public com.google.android.gms.plus.model.people.Person getCurrentPerson()
+    public void clearDefaultAccount()
+    public void revokeAccessAndDisconnect(com.google.android.gms.plus.PlusClient$OnAccessRevokedListener)
+    public boolean isConnecting()
+com.google.android.gms.plus.PlusClient$Builder:
+    public com.google.android.gms.plus.PlusClient$Builder setAccountName(java.lang.String)
+    public varargs com.google.android.gms.plus.PlusClient$Builder setScopes(java.lang.String[])
+    public com.google.android.gms.plus.PlusClient$Builder clearScopes()
+com.google.android.gms.plus.PlusClient$OnAccessRevokedListener
+com.google.android.gms.plus.PlusClient$OnMomentsLoadedListener
+com.google.android.gms.plus.PlusClient$OnPeopleLoadedListener
+com.google.android.gms.plus.PlusClient$OnPersonLoadedListener
+com.google.android.gms.plus.PlusOneButton:
+    public static final int SIZE_SMALL
+    public static final int SIZE_MEDIUM
+    public static final int SIZE_TALL
+    public static final int SIZE_STANDARD
+    public static final int ANNOTATION_NONE
+    public static final int ANNOTATION_BUBBLE
+    public static final int ANNOTATION_INLINE
+    public void initialize(com.google.android.gms.plus.PlusClient,java.lang.String,int)
+    public void initialize(com.google.android.gms.plus.PlusClient,java.lang.String,com.google.android.gms.plus.PlusOneButton$OnPlusOneClickListener)
+com.google.android.gms.plus.PlusShare
+com.google.android.gms.plus.PlusShare$Builder
+com.google.android.gms.plus.model.moments.ItemScope:
+    public abstract com.google.android.gms.plus.model.moments.ItemScope getAbout()
+    public abstract boolean hasAbout()
+    public abstract java.util.List getAdditionalName()
+    public abstract boolean hasAdditionalName()
+    public abstract com.google.android.gms.plus.model.moments.ItemScope getAddress()
+    public abstract boolean hasAddress()
+    public abstract java.lang.String getAddressCountry()
+    public abstract boolean hasAddressCountry()
+    public abstract java.lang.String getAddressLocality()
+    public abstract boolean hasAddressLocality()
+    public abstract java.lang.String getAddressRegion()
+    public abstract boolean hasAddressRegion()
+    public abstract java.util.List getAssociated_media()
+    public abstract boolean hasAssociated_media()
+    public abstract int getAttendeeCount()
+    public abstract boolean hasAttendeeCount()
+    public abstract java.util.List getAttendees()
+    public abstract boolean hasAttendees()
+    public abstract com.google.android.gms.plus.model.moments.ItemScope getAudio()
+    public abstract boolean hasAudio()
+    public abstract java.util.List getAuthor()
+    public abstract boolean hasAuthor()
+    public abstract java.lang.String getBestRating()
+    public abstract boolean hasBestRating()
+    public abstract java.lang.String getBirthDate()
+    public abstract boolean hasBirthDate()
+    public abstract com.google.android.gms.plus.model.moments.ItemScope getByArtist()
+    public abstract boolean hasByArtist()
+    public abstract java.lang.String getCaption()
+    public abstract boolean hasCaption()
+    public abstract java.lang.String getContentSize()
+    public abstract boolean hasContentSize()
+    public abstract java.lang.String getContentUrl()
+    public abstract boolean hasContentUrl()
+    public abstract java.util.List getContributor()
+    public abstract boolean hasContributor()
+    public abstract java.lang.String getDateCreated()
+    public abstract boolean hasDateCreated()
+    public abstract java.lang.String getDateModified()
+    public abstract boolean hasDateModified()
+    public abstract java.lang.String getDatePublished()
+    public abstract boolean hasDatePublished()
+    public abstract java.lang.String getDescription()
+    public abstract boolean hasDescription()
+    public abstract java.lang.String getDuration()
+    public abstract boolean hasDuration()
+    public abstract java.lang.String getEmbedUrl()
+    public abstract boolean hasEmbedUrl()
+    public abstract java.lang.String getEndDate()
+    public abstract boolean hasEndDate()
+    public abstract java.lang.String getFamilyName()
+    public abstract boolean hasFamilyName()
+    public abstract java.lang.String getGender()
+    public abstract boolean hasGender()
+    public abstract com.google.android.gms.plus.model.moments.ItemScope getGeo()
+    public abstract boolean hasGeo()
+    public abstract java.lang.String getGivenName()
+    public abstract boolean hasGivenName()
+    public abstract java.lang.String getHeight()
+    public abstract boolean hasHeight()
+    public abstract java.lang.String getId()
+    public abstract boolean hasId()
+    public abstract java.lang.String getImage()
+    public abstract boolean hasImage()
+    public abstract com.google.android.gms.plus.model.moments.ItemScope getInAlbum()
+    public abstract boolean hasInAlbum()
+    public abstract double getLatitude()
+    public abstract boolean hasLatitude()
+    public abstract com.google.android.gms.plus.model.moments.ItemScope getLocation()
+    public abstract boolean hasLocation()
+    public abstract double getLongitude()
+    public abstract boolean hasLongitude()
+    public abstract java.lang.String getName()
+    public abstract boolean hasName()
+    public abstract com.google.android.gms.plus.model.moments.ItemScope getPartOfTVSeries()
+    public abstract boolean hasPartOfTVSeries()
+    public abstract java.util.List getPerformers()
+    public abstract boolean hasPerformers()
+    public abstract java.lang.String getPlayerType()
+    public abstract boolean hasPlayerType()
+    public abstract java.lang.String getPostOfficeBoxNumber()
+    public abstract boolean hasPostOfficeBoxNumber()
+    public abstract java.lang.String getPostalCode()
+    public abstract boolean hasPostalCode()
+    public abstract java.lang.String getRatingValue()
+    public abstract boolean hasRatingValue()
+    public abstract com.google.android.gms.plus.model.moments.ItemScope getReviewRating()
+    public abstract boolean hasReviewRating()
+    public abstract java.lang.String getStartDate()
+    public abstract boolean hasStartDate()
+    public abstract java.lang.String getStreetAddress()
+    public abstract boolean hasStreetAddress()
+    public abstract java.lang.String getText()
+    public abstract boolean hasText()
+    public abstract com.google.android.gms.plus.model.moments.ItemScope getThumbnail()
+    public abstract boolean hasThumbnail()
+    public abstract java.lang.String getThumbnailUrl()
+    public abstract boolean hasThumbnailUrl()
+    public abstract java.lang.String getTickerSymbol()
+    public abstract boolean hasTickerSymbol()
+    public abstract java.lang.String getType()
+    public abstract boolean hasType()
+    public abstract java.lang.String getUrl()
+    public abstract boolean hasUrl()
+    public abstract java.lang.String getWidth()
+    public abstract boolean hasWidth()
+    public abstract java.lang.String getWorstRating()
+    public abstract boolean hasWorstRating()
+com.google.android.gms.plus.model.moments.ItemScope$Builder
+com.google.android.gms.plus.model.moments.Moment:
+    public abstract java.lang.String getId()
+    public abstract boolean hasId()
+    public abstract com.google.android.gms.plus.model.moments.ItemScope getResult()
+    public abstract boolean hasResult()
+    public abstract java.lang.String getStartDate()
+    public abstract boolean hasStartDate()
+    public abstract com.google.android.gms.plus.model.moments.ItemScope getTarget()
+    public abstract boolean hasTarget()
+    public abstract java.lang.String getType()
+    public abstract boolean hasType()
+com.google.android.gms.plus.model.moments.Moment$Builder
+com.google.android.gms.plus.model.moments.MomentBuffer
+com.google.android.gms.plus.model.people.Person:
+    public abstract java.lang.String getAboutMe()
+    public abstract boolean hasAboutMe()
+    public abstract com.google.android.gms.plus.model.people.Person$AgeRange getAgeRange()
+    public abstract boolean hasAgeRange()
+    public abstract java.lang.String getBirthday()
+    public abstract boolean hasBirthday()
+    public abstract java.lang.String getBraggingRights()
+    public abstract boolean hasBraggingRights()
+    public abstract int getCircledByCount()
+    public abstract boolean hasCircledByCount()
+    public abstract com.google.android.gms.plus.model.people.Person$Cover getCover()
+    public abstract boolean hasCover()
+    public abstract java.lang.String getCurrentLocation()
+    public abstract boolean hasCurrentLocation()
+    public abstract java.lang.String getDisplayName()
+    public abstract boolean hasDisplayName()
+    public abstract java.util.List getEmails()
+    public abstract boolean hasEmails()
+    public abstract int getGender()
+    public abstract boolean hasGender()
+    public abstract boolean isHasApp()
+    public abstract boolean hasHasApp()
+    public abstract java.lang.String getId()
+    public abstract boolean hasId()
+    public abstract com.google.android.gms.plus.model.people.Person$Image getImage()
+    public abstract boolean hasImage()
+    public abstract boolean isPlusUser()
+    public abstract boolean hasIsPlusUser()
+    public abstract java.lang.String getLanguage()
+    public abstract boolean hasLanguage()
+    public abstract com.google.android.gms.plus.model.people.Person$Name getName()
+    public abstract boolean hasName()
+    public abstract java.lang.String getNickname()
+    public abstract boolean hasNickname()
+    public abstract int getObjectType()
+    public abstract boolean hasObjectType()
+    public abstract java.util.List getOrganizations()
+    public abstract boolean hasOrganizations()
+    public abstract java.util.List getPlacesLived()
+    public abstract boolean hasPlacesLived()
+    public abstract int getPlusOneCount()
+    public abstract boolean hasPlusOneCount()
+    public abstract int getRelationshipStatus()
+    public abstract boolean hasRelationshipStatus()
+    public abstract java.lang.String getTagline()
+    public abstract boolean hasTagline()
+    public abstract java.lang.String getUrl()
+    public abstract boolean hasUrl()
+    public abstract java.util.List getUrls()
+    public abstract boolean hasUrls()
+    public abstract boolean isVerified()
+    public abstract boolean hasVerified()
+com.google.android.gms.plus.model.people.Person$AgeRange:
+    public abstract int getMax()
+    public abstract boolean hasMax()
+    public abstract int getMin()
+    public abstract boolean hasMin()
+com.google.android.gms.plus.model.people.Person$Collection
+com.google.android.gms.plus.model.people.Person$Cover:
+    public abstract com.google.android.gms.plus.model.people.Person$Cover$CoverInfo getCoverInfo()
+    public abstract boolean hasCoverInfo()
+    public abstract com.google.android.gms.plus.model.people.Person$Cover$CoverPhoto getCoverPhoto()
+    public abstract boolean hasCoverPhoto()
+    public abstract int getLayout()
+    public abstract boolean hasLayout()
+com.google.android.gms.plus.model.people.Person$Cover$CoverInfo:
+    public abstract int getLeftImageOffset()
+    public abstract boolean hasLeftImageOffset()
+    public abstract int getTopImageOffset()
+    public abstract boolean hasTopImageOffset()
+com.google.android.gms.plus.model.people.Person$Cover$CoverPhoto:
+    public abstract int getHeight()
+    public abstract boolean hasHeight()
+    public abstract java.lang.String getUrl()
+    public abstract boolean hasUrl()
+    public abstract int getWidth()
+    public abstract boolean hasWidth()
+com.google.android.gms.plus.model.people.Person$Cover$Layout
+com.google.android.gms.plus.model.people.Person$Emails:
+    public abstract boolean isPrimary()
+    public abstract boolean hasPrimary()
+    public abstract int getType()
+    public abstract boolean hasType()
+    public abstract java.lang.String getValue()
+    public abstract boolean hasValue()
+com.google.android.gms.plus.model.people.Person$Emails$Type
+com.google.android.gms.plus.model.people.Person$Gender
+com.google.android.gms.plus.model.people.Person$Image:
+    public abstract java.lang.String getUrl()
+    public abstract boolean hasUrl()
+com.google.android.gms.plus.model.people.Person$Name:
+    public abstract java.lang.String getFamilyName()
+    public abstract boolean hasFamilyName()
+    public abstract java.lang.String getFormatted()
+    public abstract boolean hasFormatted()
+    public abstract java.lang.String getGivenName()
+    public abstract boolean hasGivenName()
+    public abstract java.lang.String getHonorificPrefix()
+    public abstract boolean hasHonorificPrefix()
+    public abstract java.lang.String getHonorificSuffix()
+    public abstract boolean hasHonorificSuffix()
+    public abstract java.lang.String getMiddleName()
+    public abstract boolean hasMiddleName()
+com.google.android.gms.plus.model.people.Person$ObjectType
+com.google.android.gms.plus.model.people.Person$OrderBy
+com.google.android.gms.plus.model.people.Person$Organizations:
+    public abstract java.lang.String getDepartment()
+    public abstract boolean hasDepartment()
+    public abstract java.lang.String getDescription()
+    public abstract boolean hasDescription()
+    public abstract java.lang.String getEndDate()
+    public abstract boolean hasEndDate()
+    public abstract java.lang.String getLocation()
+    public abstract boolean hasLocation()
+    public abstract java.lang.String getName()
+    public abstract boolean hasName()
+    public abstract boolean isPrimary()
+    public abstract boolean hasPrimary()
+    public abstract java.lang.String getStartDate()
+    public abstract boolean hasStartDate()
+    public abstract java.lang.String getTitle()
+    public abstract boolean hasTitle()
+    public abstract int getType()
+    public abstract boolean hasType()
+com.google.android.gms.plus.model.people.Person$Organizations$Type
+com.google.android.gms.plus.model.people.Person$PlacesLived:
+    public abstract boolean isPrimary()
+    public abstract boolean hasPrimary()
+    public abstract java.lang.String getValue()
+    public abstract boolean hasValue()
+com.google.android.gms.plus.model.people.Person$RelationshipStatus
+com.google.android.gms.plus.model.people.Person$Urls:
+    public abstract boolean isPrimary()
+    public abstract boolean hasPrimary()
+    public abstract int getType()
+    public abstract boolean hasType()
+    public abstract java.lang.String getValue()
+    public abstract boolean hasValue()
+com.google.android.gms.plus.model.people.Person$Urls$Type
+com.google.android.gms.plus.model.people.PersonBuffer
 org.jefferyemanuel.n4fix.BuildConfig
 org.jefferyemanuel.n4fix.Consts:
     public static final boolean DEVELOPER_MODE
@@ -1086,6 +2304,7 @@ org.jefferyemanuel.n4fix.Consts:
     public static final int MILLISECONDS_PER_SECOND
     public static final int DETECTION_INTERVAL_SECONDS
     public static final int DETECTION_INTERVAL_MILLISECONDS
+    public static final int REQUEST_CODE_RESOLVE_ERR
     28:30:private Consts()
 org.jefferyemanuel.n4fix.R
 org.jefferyemanuel.n4fix.R$attr
@@ -1097,13 +2316,12 @@ org.jefferyemanuel.n4fix.R$layout
 org.jefferyemanuel.n4fix.R$menu
 org.jefferyemanuel.n4fix.R$string
 org.jefferyemanuel.n4fix.R$style
+org.jefferyemanuel.n4fix.R$styleable
 org.jefferyemanuel.n4fix.R$xml
 org.jefferyemanuel.n4fix.SeekBarPreference:
     private static final java.lang.String androidns
     134:134:public void setMax(int)
     135:135:public int getMax()
-org.jefferyemanuel.n4fix.SettingsN4Activity:
-    250:264:public static void createToast(java.lang.String,android.content.Context)
 org.jefferyemanuel.n4fix.ShakeEventListener:
     private static final int MIN_DIRECTION_CHANGE
     private static final int MAX_PAUSE_BETHWEEN_DIRECTION_CHANGE

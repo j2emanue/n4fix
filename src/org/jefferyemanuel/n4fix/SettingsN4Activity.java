@@ -1,22 +1,15 @@
 package org.jefferyemanuel.n4fix;
 
-import java.util.List;
-
-import android.annotation.TargetApi;
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
-import android.content.res.Configuration;
-import android.net.Uri;
-import android.os.Build;
+import android.content.IntentSender.SendIntentException;
 import android.os.Bundle;
 import android.preference.CheckBoxPreference;
 import android.preference.Preference;
 import android.preference.PreferenceActivity;
 import android.preference.PreferenceCategory;
-import android.preference.PreferenceFragment;
 import android.preference.PreferenceManager;
-import android.preference.PreferenceScreen;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -31,6 +24,11 @@ import android.widget.Toast;
 import com.google.ads.AdRequest;
 import com.google.ads.AdSize;
 import com.google.ads.AdView;
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.GooglePlayServicesClient.ConnectionCallbacks;
+import com.google.android.gms.common.GooglePlayServicesClient.OnConnectionFailedListener;
+import com.google.android.gms.plus.PlusClient;
+import com.google.android.gms.plus.PlusOneButton;
 
 
 /**
@@ -44,9 +42,54 @@ import com.google.ads.AdView;
  * we create a checkbox to enable to disable the service and add a custom preferenceDialog
  * to adjust the strength of user shake.  The background component (service) that is spawned
  * is used to create a broadcastReciever to listen for phone calls and turn on sensor tracking
- * accordingly.  apk is here: https://play.google.com/store/apps/details?id=org.jefferyemanuel.n4fix
+ * accordingly.  
+ * 
+ * Lastly, we interface with Google services connection callbacks inorder to show 
+ * a Google +1 button -- Attach the google-play-services_lib project as a library in the android SDK sameples folder.
+ * 
+ * beta apk is here: https://play.google.com/store/apps/details?id=org.jefferyemanuel.n4fix
  */
-public class SettingsN4Activity extends PreferenceActivity {
+public class SettingsN4Activity extends PreferenceActivity implements 
+ConnectionCallbacks, OnConnectionFailedListener {
+	
+	
+	 	private ProgressDialog mConnectionProgressDialog;
+	    private PlusClient mPlusClient;
+	    private ConnectionResult mConnectionResult;
+	
+	
+	    @Override
+	    protected void onStart() {
+	        super.onStart();
+	        mPlusClient.connect();
+	    }
+
+	    @Override
+	    protected void onStop() {
+	        super.onStop();
+	        mPlusClient.disconnect();
+	    }
+	    
+	    
+	@Override
+		protected void onCreate(Bundle savedInstanceState) {
+			// TODO Auto-generated method stub
+			super.onCreate(savedInstanceState);
+			 
+			mPlusClient = new PlusClient.Builder(this, this, this)
+	         .setVisibleActivities("http://schemas.google.com/AddActivity", "http://schemas.google.com/BuyActivity")
+	         .build();
+			
+			
+			
+	 // Progress bar to be displayed if the connection failure is not resolved.
+			 mConnectionProgressDialog = new ProgressDialog(this);
+			 mConnectionProgressDialog.setMessage("Signing in...");
+			    
+			
+			
+		}
+
 	/**
 	set up our preference screen and load advertisement
 	 */
@@ -57,8 +100,9 @@ public class SettingsN4Activity extends PreferenceActivity {
 		setContentView(R.layout.config);
 		
 		setupSimplePreferencesScreen();
-
 		setAdvertisment();
+		
+		
 	}
 
 	@Override
@@ -287,6 +331,54 @@ public class SettingsN4Activity extends PreferenceActivity {
 			adViews[i].loadAd(AD);
 		}
 
+	}
+
+	@Override
+	public void onConnectionFailed(ConnectionResult result) {
+		// TODO Auto-generated method stub
+		 if (mConnectionProgressDialog.isShowing()) {
+             // The user clicked the sign-in button already. Start to resolve
+             // connection errors. Wait until onConnected() to dismiss the
+             // connection dialog.
+             if (result.hasResolution()) {
+                     try {
+                             result.startResolutionForResult(this, Consts.REQUEST_CODE_RESOLVE_ERR);
+                     } catch (SendIntentException e) {
+                             mPlusClient.connect();
+                     }
+             }
+     }
+
+     // Save the intent so that we can start an activity when the user clicks
+     // the sign-in button.
+     mConnectionResult = result;
+
+	}
+
+	@Override
+    protected void onActivityResult(int requestCode, int responseCode, Intent intent) {
+		
+		/*checks if there was an connection error that is resolvable and tries to connect again*/
+        if (requestCode == Consts.REQUEST_CODE_RESOLVE_ERR && responseCode == RESULT_OK) {
+            mConnectionResult = null;
+            mPlusClient.connect();
+        }
+    }
+
+	/*listen for a google services connection and react when connected*/
+	@Override
+	public void onConnected(Bundle arg0) {
+		// TODO Auto-generated method stub
+		 String accountName = mPlusClient.getAccountName();
+		 createToast(accountName + " is connected.", this);//show a custom toast on success
+	       
+	}
+
+	@Override
+	public void onDisconnected() {
+		// TODO Auto-generated method stub
+		if(Consts.DEVELOPER_MODE)
+			Log.d(Consts.TAG, "disconnected from google services");
 	}
 
 }

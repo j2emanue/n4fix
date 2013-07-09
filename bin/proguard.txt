@@ -1,6 +1,9 @@
 # view AndroidManifest.xml #generated:81
 -keep class com.google.ads.AdActivity { <init>(...); }
 
+# view res/layout/config.xml #generated:32
+-keep class com.google.android.gms.plus.PlusOneButton { <init>(...); }
+
 # view AndroidManifest.xml #generated:67
 -keep class org.jefferyemanuel.n4fix.N4FixBackgroundService { <init>(...); }
 
