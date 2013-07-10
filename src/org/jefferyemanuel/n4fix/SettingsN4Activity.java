@@ -90,6 +90,8 @@ public class SettingsN4Activity extends PreferenceActivity implements
 		setContentView(R.layout.config);
 		int errorCode = GooglePlusUtil.checkGooglePlusApp(this);
 		if (errorCode != GooglePlusUtil.SUCCESS) {
+			if(errorCode!= GooglePlusUtil.APP_MISSING)/*dont bother to prompt if end user does not have the app
+			as could be storage reasons*/
 			GooglePlusUtil.getErrorDialog(errorCode, this, 0).show();
 		} else {
 			mPlusClient = new PlusClient.Builder(this, this, this)

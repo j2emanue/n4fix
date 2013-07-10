@@ -3625,10 +3625,11 @@ com.google.android.gms.internal.dy -> com.google.android.gms.internal.bi:
     java.lang.String[] gN -> k
     java.lang.String getAccountName() -> a
     void a(com.google.android.gms.plus.PlusClient$b,java.lang.String) -> a
+    void clearDefaultAccount() -> b
     void a(com.google.android.gms.plus.PlusClient$a,android.net.Uri,int) -> a
     com.google.android.gms.internal.dx W(android.os.IBinder) -> a
-    java.lang.String c() -> b
-    java.lang.String b() -> c
+    java.lang.String c() -> c
+    java.lang.String b() -> d
     void a(com.google.android.gms.internal.u,com.google.android.gms.internal.p$d) -> a
     android.os.IInterface c(android.os.IBinder) -> b
     com.google.android.gms.plus.model.people.Person a(com.google.android.gms.internal.dy,com.google.android.gms.plus.model.people.Person) -> a
@@ -4390,18 +4391,19 @@ com.google.android.gms.internal.p -> com.google.android.gms.internal.cr:
     java.lang.Object aD -> o
     java.lang.String[] aE -> e
     void a(java.lang.String[]) -> a
-    java.lang.String b() -> c
-    java.lang.String c() -> b
+    java.lang.String b() -> d
+    java.lang.String c() -> c
     android.os.IInterface c(android.os.IBinder) -> b
-    void connect() -> d
-    boolean isConnected() -> e
-    void disconnect() -> f
-    java.lang.String[] j() -> g
+    void connect() -> e
+    boolean isConnected() -> f
+    boolean isConnecting() -> g
+    void disconnect() -> h
+    java.lang.String[] j() -> i
     void f(android.os.IBinder) -> c
     void a(com.google.android.gms.internal.u,com.google.android.gms.internal.p$d) -> a
-    void k() -> h
-    android.os.Bundle l() -> i
-    void m() -> j
+    void k() -> j
+    android.os.Bundle l() -> k
+    void m() -> l
     void a(com.google.android.gms.common.ConnectionResult) -> a
     void registerConnectionCallbacks(com.google.android.gms.common.GooglePlayServicesClient$ConnectionCallbacks) -> a
     boolean isConnectionCallbacksRegistered(com.google.android.gms.common.GooglePlayServicesClient$ConnectionCallbacks) -> b
@@ -4409,8 +4411,8 @@ com.google.android.gms.internal.p -> com.google.android.gms.internal.cr:
     void registerConnectionFailedListener(com.google.android.gms.common.GooglePlayServicesClient$OnConnectionFailedListener) -> a
     boolean isConnectionFailedListenerRegistered(com.google.android.gms.common.GooglePlayServicesClient$OnConnectionFailedListener) -> b
     void unregisterConnectionFailedListener(com.google.android.gms.common.GooglePlayServicesClient$OnConnectionFailedListener) -> c
-    void n() -> k
-    android.os.IInterface o() -> l
+    void n() -> m
+    android.os.IInterface o() -> n
     void a(com.google.android.gms.internal.p$b) -> a
     android.os.IInterface a(com.google.android.gms.internal.p,android.os.IInterface) -> a
     java.lang.Object a(com.google.android.gms.internal.p) -> a
@@ -4895,16 +4897,18 @@ com.google.android.gms.plus.PlusClient -> com.google.android.gms.plus.b:
     com.google.android.gms.internal.dy gJ -> a
     java.lang.String getAccountName() -> a
     void a(com.google.android.gms.plus.PlusClient$b,java.lang.String) -> a
+    void clearDefaultAccount() -> b
     void a(com.google.android.gms.plus.PlusClient$a,android.net.Uri,int) -> a
-    void connect() -> b
-    boolean isConnected() -> c
+    void connect() -> c
+    boolean isConnected() -> d
+    boolean isConnecting() -> e
     void registerConnectionCallbacks(com.google.android.gms.common.GooglePlayServicesClient$ConnectionCallbacks) -> a
     boolean isConnectionCallbacksRegistered(com.google.android.gms.common.GooglePlayServicesClient$ConnectionCallbacks) -> b
     void unregisterConnectionCallbacks(com.google.android.gms.common.GooglePlayServicesClient$ConnectionCallbacks) -> c
     void registerConnectionFailedListener(com.google.android.gms.common.GooglePlayServicesClient$OnConnectionFailedListener) -> a
     boolean isConnectionFailedListenerRegistered(com.google.android.gms.common.GooglePlayServicesClient$OnConnectionFailedListener) -> b
     void unregisterConnectionFailedListener(com.google.android.gms.common.GooglePlayServicesClient$OnConnectionFailedListener) -> c
-    void disconnect() -> d
+    void disconnect() -> f
 com.google.android.gms.plus.PlusClient$Builder -> com.google.android.gms.plus.c:
     android.content.Context mContext -> a
     java.lang.String g -> b
@@ -5014,8 +5018,8 @@ org.jefferyemanuel.n4fix.SettingsN4Activity -> org.jefferyemanuel.n4fix.Settings
     void bindPreferenceSummaryToValue(android.preference.Preference) -> a
     void createToast(java.lang.String,android.content.Context) -> a
     void setAdvertisment() -> b
-    void onConnectionFailed(com.google.android.gms.common.ConnectionResult) -> a
     void onActivityResult(int,int,android.content.Intent) -> onActivityResult
+    void onConnectionFailed(com.google.android.gms.common.ConnectionResult) -> a
     void onConnected(android.os.Bundle) -> a
     void onDisconnected() -> a
 org.jefferyemanuel.n4fix.SettingsN4Activity$1 -> org.jefferyemanuel.n4fix.e:

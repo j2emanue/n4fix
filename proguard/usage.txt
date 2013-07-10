@@ -1509,7 +1509,6 @@ com.google.android.gms.internal.dy:
     public void loadPeople(com.google.android.gms.plus.PlusClient$OnPeopleLoadedListener,int,int,int,java.lang.String)
     public void loadPerson(com.google.android.gms.plus.PlusClient$OnPersonLoadedListener,java.lang.String)
     public com.google.android.gms.plus.model.people.Person getCurrentPerson()
-    public void clearDefaultAccount()
     public void revokeAccessAndDisconnect(com.google.android.gms.plus.PlusClient$OnAccessRevokedListener)
 com.google.android.gms.internal.dy$a
 com.google.android.gms.internal.dy$b
@@ -1723,7 +1722,6 @@ com.google.android.gms.internal.m
 com.google.android.gms.internal.n:
     public static void a(boolean,java.lang.Object)
 com.google.android.gms.internal.p:
-    public boolean isConnecting()
     public final android.content.Context getContext()
 com.google.android.gms.internal.p$c
 com.google.android.gms.internal.r:
@@ -2011,9 +2009,7 @@ com.google.android.gms.plus.PlusClient:
     public void loadPeople(com.google.android.gms.plus.PlusClient$OnPeopleLoadedListener,int,int,int,java.lang.String)
     public void loadPerson(com.google.android.gms.plus.PlusClient$OnPersonLoadedListener,java.lang.String)
     public com.google.android.gms.plus.model.people.Person getCurrentPerson()
-    public void clearDefaultAccount()
     public void revokeAccessAndDisconnect(com.google.android.gms.plus.PlusClient$OnAccessRevokedListener)
-    public boolean isConnecting()
 com.google.android.gms.plus.PlusClient$Builder:
     public com.google.android.gms.plus.PlusClient$Builder setAccountName(java.lang.String)
     public varargs com.google.android.gms.plus.PlusClient$Builder setScopes(java.lang.String[])
