@@ -389,6 +389,7 @@ org.jefferyemanuel.n4fix.R$string: int pref_header_data_confidence
 org.jefferyemanuel.n4fix.R$string: int pref_header_general
 org.jefferyemanuel.n4fix.R$string: int pref_title_add_friends_to_messages
 org.jefferyemanuel.n4fix.R$string: int recommendations_sms_social
+org.jefferyemanuel.n4fix.R$string: int social_recommendation_url
 org.jefferyemanuel.n4fix.R$string: int title_social_recommendations
 org.jefferyemanuel.n4fix.R$style: int AppBaseTheme
 org.jefferyemanuel.n4fix.R$style: int AppTheme

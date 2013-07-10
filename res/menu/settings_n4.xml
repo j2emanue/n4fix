@@ -17,5 +17,12 @@
         android:title="Google Plus Sign-In"
         />
     
+    
+     <item
+        android:id="@+id/signout_menuitem"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="Google Plus Sign-out"
+        />
 
 </menu>

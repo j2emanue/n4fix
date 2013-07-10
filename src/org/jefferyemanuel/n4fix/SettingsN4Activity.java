@@ -62,7 +62,8 @@ public class SettingsN4Activity extends PreferenceActivity implements
 	@Override
 	protected void onStart() {
 		super.onStart();
-		mPlusClient.connect();
+		if (!mPlusClient.isConnecting())
+			mPlusClient.connect();
 	}
 
 	@Override
@@ -70,7 +71,6 @@ public class SettingsN4Activity extends PreferenceActivity implements
 		super.onStop();
 		mPlusClient.disconnect();
 	}
-
 
 	@Override
 	protected void onResume() {
@@ -83,7 +83,6 @@ public class SettingsN4Activity extends PreferenceActivity implements
 
 	}
 
-	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
@@ -98,16 +97,14 @@ public class SettingsN4Activity extends PreferenceActivity implements
 							"http://schemas.google.com/AddActivity",
 							"http://schemas.google.com/BuyActivity").build();
 
-			
-
-			// Progress bar to be displayed if the connection failure is not resolved.
 			mConnectionProgressDialog = new ProgressDialog(this);
 			mConnectionProgressDialog.setMessage("Signing in...");
+			mConnectionProgressDialog.setOwnerActivity(this);
 
 		}
 		mPlusOneButton = (PlusOneButton) findViewById(R.id.plus_one_button);
-		
-		}
+		promptGooglePlusSignIn(); //force inital sign in
+	}
 
 	/**
 	 * set up our preference screen and load advertisement
@@ -116,7 +113,7 @@ public class SettingsN4Activity extends PreferenceActivity implements
 	@Override
 	protected void onPostCreate(Bundle savedInstanceState) {
 		super.onPostCreate(savedInstanceState);
-		
+
 		setupSimplePreferencesScreen();
 		setAdvertisment();
 
@@ -138,6 +135,14 @@ public class SettingsN4Activity extends PreferenceActivity implements
 			break;
 		case R.id.signin_menuitem:
 			promptGooglePlusSignIn();
+			break;
+
+		case R.id.signout_menuitem:
+			if (mPlusClient.isConnected()) {
+				mPlusClient.clearDefaultAccount();
+				mPlusClient.disconnect();
+				mPlusClient.connect();
+			}
 			break;
 
 		default:
@@ -163,20 +168,23 @@ public class SettingsN4Activity extends PreferenceActivity implements
 
 	private void promptGooglePlusSignIn() {
 
-		if (mConnectionResult == null) {
-			mConnectionProgressDialog.show();
-		} else {
-			try {
-				mConnectionResult.startResolutionForResult(
-						SettingsN4Activity.this,
-						Consts.REQUEST_CODE_RESOLVE_ERR);
-			} catch (SendIntentException e) {
-				// Try connecting again.
-				mConnectionResult = null;
-				mPlusClient.connect();
+		if (!mPlusClient.isConnected()) {
+			if (mConnectionResult == null) {
+				// Progress bar to be displayed if the connection failure is not resolved.
+				mConnectionProgressDialog.show();
+			} else {
+				try {
+					mConnectionResult.startResolutionForResult(
+							SettingsN4Activity.this,
+							Consts.REQUEST_CODE_RESOLVE_ERR);
+				} catch (SendIntentException e) {
+					// Try connecting again.
+					mConnectionResult = null;
+					mPlusClient.connect();
+				}
 			}
-		}
 
+		}
 	}
 
 	/**
@@ -331,7 +339,7 @@ public class SettingsN4Activity extends PreferenceActivity implements
 		Toast toast = new Toast(c);
 		toast.setGravity(Gravity.BOTTOM, 0, 40);
 
-		toast.setDuration(Toast.LENGTH_LONG);
+		toast.setDuration(Toast.LENGTH_SHORT);
 		toast.setView(layout);
 		toast.show();
 	}
@@ -364,34 +372,6 @@ public class SettingsN4Activity extends PreferenceActivity implements
 	}
 
 	@Override
-	public void onConnectionFailed(ConnectionResult result) {
-		// TODO Auto-generated method stub
-
-		if (Consts.DEVELOPER_MODE)
-			Log.d(Consts.TAG, "onConnectionFailed: connection Result: "
-					+ result.isSuccess());
-
-		if (mConnectionProgressDialog.isShowing()) {
-			// The user clicked the sign-in button already. Start to resolve
-			// connection errors. Wait until onConnected() to dismiss the
-			// connection dialog.
-			if (result.hasResolution()) {
-				try {
-					result.startResolutionForResult(this,
-							Consts.REQUEST_CODE_RESOLVE_ERR);
-				} catch (SendIntentException e) {
-					mPlusClient.connect();
-				}
-			}
-		}
-
-		// Save the intent so that we can start an activity when the user clicks
-		// the sign-in button.
-		mConnectionResult = result;
-
-	}
-
-	@Override
 	protected void onActivityResult(int requestCode, int responseCode,
 			Intent intent) {
 
@@ -408,16 +388,53 @@ public class SettingsN4Activity extends PreferenceActivity implements
 			mPlusClient.connect();
 		}
 	}
+	
+	
+	@Override
+	public void onConnectionFailed(ConnectionResult result) {
+		// TODO Auto-generated method stub
+
+		if (Consts.DEVELOPER_MODE)
+			Log.d(Consts.TAG, "onConnectionFailed: connection Result: "
+					+ result.isSuccess());
+
+		if (mConnectionProgressDialog.isShowing()) {
+			// The user clicked the sign-in button already. Start to resolve
+			// connection errors. Wait until onConnected() to dismiss the
+			// connection dialog.
+
+			mConnectionProgressDialog.dismiss();
+
+			if (result.hasResolution()) {
+				try {
+					result.startResolutionForResult(this,
+							Consts.REQUEST_CODE_RESOLVE_ERR);
+				} catch (SendIntentException e) {
+					mPlusClient.connect();
+				}
+			}
+		}
+
+		// Save the intent so that we can start an activity when the user clicks
+		// the sign-in button.
+		mConnectionResult = result;
+
+	}
+
+	
 
 	/* listen for a google services connection and react when connected */
 	@Override
 	public void onConnected(Bundle arg0) {
 		// TODO Auto-generated method stub
 
+		mConnectionProgressDialog.dismiss();
+
 		if (Consts.DEVELOPER_MODE)
-			Log.d(Consts.TAG, "onConnected: Connected to Google services");
+			Log.d(Consts.TAG, "onConnected: Connected to Google services as:"
+					+ mPlusClient.getAccountName());
 		String accountName = mPlusClient.getAccountName();
-		createToast(accountName + " is connected.", this);//show a custom toast on success
+		createToast(accountName + " is connected to Google+.", this);//show a custom toast on success
 
 	}
 

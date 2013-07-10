@@ -206,6 +206,7 @@ containing a value of this type.
         public static final int satellite=0x7f060002;
         public static final int share_menuitem=0x7f06000d;
         public static final int signin_menuitem=0x7f06000e;
+        public static final int signout_menuitem=0x7f06000f;
         public static final int terrain=0x7f060003;
         public static final int text=0x7f06000a;
         public static final int toast_layout_root=0x7f060009;

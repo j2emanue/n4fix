@@ -76,6 +76,7 @@ int id plus_one_button 0x7f060007
 int id satellite 0x7f060002
 int id share_menuitem 0x7f06000d
 int id signin_menuitem 0x7f06000e
+int id signout_menuitem 0x7f06000f
 int id terrain 0x7f060003
 int id text 0x7f06000a
 int id toast_layout_root 0x7f060009

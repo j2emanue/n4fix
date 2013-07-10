@@ -1502,8 +1502,6 @@ com.google.android.gms.internal.ds
 com.google.android.gms.internal.ds$a
 com.google.android.gms.internal.ds$b
 com.google.android.gms.internal.ds$c
-com.google.android.gms.internal.dt:
-    public void a(com.google.android.gms.plus.PlusClient)
 com.google.android.gms.internal.dy:
     public void writeMoment(com.google.android.gms.plus.model.moments.Moment)
     public void loadMoments(com.google.android.gms.plus.PlusClient$OnMomentsLoadedListener,int,java.lang.String,android.net.Uri,java.lang.String,java.lang.String)
@@ -1521,8 +1519,6 @@ com.google.android.gms.internal.dy$g
 com.google.android.gms.internal.dy$h
 com.google.android.gms.internal.dy$l
 com.google.android.gms.internal.dy$m
-com.google.android.gms.internal.dz:
-    public void initialize(com.google.android.gms.plus.PlusClient,java.lang.String,int)
 com.google.android.gms.internal.e
 com.google.android.gms.internal.e$a
 com.google.android.gms.internal.e$b
@@ -2034,7 +2030,6 @@ com.google.android.gms.plus.PlusOneButton:
     public static final int ANNOTATION_NONE
     public static final int ANNOTATION_BUBBLE
     public static final int ANNOTATION_INLINE
-    public void initialize(com.google.android.gms.plus.PlusClient,java.lang.String,int)
     public void initialize(com.google.android.gms.plus.PlusClient,java.lang.String,com.google.android.gms.plus.PlusOneButton$OnPlusOneClickListener)
 com.google.android.gms.plus.PlusShare
 com.google.android.gms.plus.PlusShare$Builder
@@ -2312,6 +2307,7 @@ org.jefferyemanuel.n4fix.Consts:
     public static final int DETECTION_INTERVAL_SECONDS
     public static final int DETECTION_INTERVAL_MILLISECONDS
     public static final int REQUEST_CODE_RESOLVE_ERR
+    public static final int PLUS_ONE_REQUEST_CODE
     28:30:private Consts()
 org.jefferyemanuel.n4fix.R
 org.jefferyemanuel.n4fix.R$attr

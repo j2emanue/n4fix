@@ -3489,6 +3489,7 @@ com.google.android.gms.internal.dt -> com.google.android.gms.internal.aw:
     com.google.android.gms.plus.PlusClient gY -> f
     void a(com.google.android.gms.common.ConnectionResult,android.os.ParcelFileDescriptor) -> a
     android.graphics.Bitmap a(android.graphics.Bitmap,int) -> b
+    void a(com.google.android.gms.plus.PlusClient) -> a
     void a(android.net.Uri,int) -> a
     void onConnected(android.os.Bundle) -> a
     void onDisconnected() -> a
@@ -3683,6 +3684,7 @@ com.google.android.gms.internal.dz -> com.google.android.gms.internal.bo:
     int a(android.content.Context,android.util.AttributeSet) -> a
     int b(android.content.Context,android.util.AttributeSet) -> b
     android.content.Context k(android.content.Context) -> a
+    void initialize(com.google.android.gms.plus.PlusClient,java.lang.String,int) -> a
     void onConnected(android.os.Bundle) -> a
     void onConnectionFailed(com.google.android.gms.common.ConnectionResult) -> a
     void onDisconnected() -> a
@@ -4921,6 +4923,7 @@ com.google.android.gms.plus.PlusClient$b -> com.google.android.gms.plus.e:
     void a(com.google.android.gms.common.ConnectionResult,com.google.android.gms.internal.du) -> a
 com.google.android.gms.plus.PlusOneButton -> com.google.android.gms.plus.PlusOneButton:
     com.google.android.gms.internal.dz gQ -> a
+    void initialize(com.google.android.gms.plus.PlusClient,java.lang.String,int) -> a
     void setOnPlusOneClickListener(com.google.android.gms.plus.PlusOneButton$OnPlusOneClickListener) -> setOnPlusOneClickListener
     void setAnnotation(int) -> setAnnotation
     void setSize(int) -> setSize
@@ -4996,9 +4999,11 @@ org.jefferyemanuel.n4fix.SettingsN4Activity -> org.jefferyemanuel.n4fix.Settings
     android.app.ProgressDialog mConnectionProgressDialog -> a
     com.google.android.gms.plus.PlusClient mPlusClient -> b
     com.google.android.gms.common.ConnectionResult mConnectionResult -> c
-    android.preference.Preference$OnPreferenceChangeListener sBindPreferenceSummaryToValueListener -> d
+    com.google.android.gms.plus.PlusOneButton mPlusOneButton -> d
+    android.preference.Preference$OnPreferenceChangeListener sBindPreferenceSummaryToValueListener -> e
     void onStart() -> onStart
     void onStop() -> onStop
+    void onResume() -> onResume
     void onCreate(android.os.Bundle) -> onCreate
     void onPostCreate(android.os.Bundle) -> onPostCreate
     boolean onCreateOptionsMenu(android.view.Menu) -> onCreateOptionsMenu
@@ -5006,7 +5011,6 @@ org.jefferyemanuel.n4fix.SettingsN4Activity -> org.jefferyemanuel.n4fix.Settings
     void pushSMS() -> c
     void promptGooglePlusSignIn() -> d
     void setupSimplePreferencesScreen() -> e
-    void onResume() -> onResume
     void bindPreferenceSummaryToValue(android.preference.Preference) -> a
     void createToast(java.lang.String,android.content.Context) -> a
     void setAdvertisment() -> b
