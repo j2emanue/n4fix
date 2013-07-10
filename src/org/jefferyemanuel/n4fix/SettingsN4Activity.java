@@ -17,7 +17,6 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -30,6 +29,7 @@ import com.google.android.gms.common.GooglePlayServicesClient.ConnectionCallback
 import com.google.android.gms.common.GooglePlayServicesClient.OnConnectionFailedListener;
 import com.google.android.gms.plus.GooglePlusUtil;
 import com.google.android.gms.plus.PlusClient;
+import com.google.android.gms.plus.PlusOneButton;
 
 /**
  * A {@link PreferenceActivity} that presents a set of application settings. On
@@ -57,6 +57,7 @@ public class SettingsN4Activity extends PreferenceActivity implements
 	private ProgressDialog mConnectionProgressDialog;
 	private PlusClient mPlusClient;
 	private ConnectionResult mConnectionResult;
+	private PlusOneButton mPlusOneButton;
 
 	@Override
 	protected void onStart() {
@@ -70,11 +71,24 @@ public class SettingsN4Activity extends PreferenceActivity implements
 		mPlusClient.disconnect();
 	}
 
+
+	@Override
+	protected void onResume() {
+		// TODO Auto-generated method stub
+		super.onResume();
+		// Refresh the state of the +1 button each time the activity receives focus.
+		mPlusOneButton.initialize(mPlusClient,
+				getString(R.string.social_recommendation_url),
+				Consts.PLUS_ONE_REQUEST_CODE);
+
+	}
+
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
-
+		setContentView(R.layout.config);
 		int errorCode = GooglePlusUtil.checkGooglePlusApp(this);
 		if (errorCode != GooglePlusUtil.SUCCESS) {
 			GooglePlusUtil.getErrorDialog(errorCode, this, 0).show();
@@ -84,12 +98,16 @@ public class SettingsN4Activity extends PreferenceActivity implements
 							"http://schemas.google.com/AddActivity",
 							"http://schemas.google.com/BuyActivity").build();
 
+			
+
 			// Progress bar to be displayed if the connection failure is not resolved.
 			mConnectionProgressDialog = new ProgressDialog(this);
 			mConnectionProgressDialog.setMessage("Signing in...");
 
 		}
-	}
+		mPlusOneButton = (PlusOneButton) findViewById(R.id.plus_one_button);
+		
+		}
 
 	/**
 	 * set up our preference screen and load advertisement
@@ -98,8 +116,7 @@ public class SettingsN4Activity extends PreferenceActivity implements
 	@Override
 	protected void onPostCreate(Bundle savedInstanceState) {
 		super.onPostCreate(savedInstanceState);
-		setContentView(R.layout.config);
-
+		
 		setupSimplePreferencesScreen();
 		setAdvertisment();
 
@@ -189,12 +206,6 @@ public class SettingsN4Activity extends PreferenceActivity implements
 
 		bindPreferenceSummaryToValue(findPreference(getString(R.string.cookie_force)));
 		bindPreferenceSummaryToValue(findPreference(getString(R.string.cookie_on_off)));
-	}
-
-	@Override
-	protected void onResume() {
-		// TODO Auto-generated method stub
-		super.onResume();
 	}
 
 	/**
@@ -355,6 +366,11 @@ public class SettingsN4Activity extends PreferenceActivity implements
 	@Override
 	public void onConnectionFailed(ConnectionResult result) {
 		// TODO Auto-generated method stub
+
+		if (Consts.DEVELOPER_MODE)
+			Log.d(Consts.TAG, "onConnectionFailed: connection Result: "
+					+ result.isSuccess());
+
 		if (mConnectionProgressDialog.isShowing()) {
 			// The user clicked the sign-in button already. Start to resolve
 			// connection errors. Wait until onConnected() to dismiss the
@@ -379,6 +395,9 @@ public class SettingsN4Activity extends PreferenceActivity implements
 	protected void onActivityResult(int requestCode, int responseCode,
 			Intent intent) {
 
+		if (Consts.DEVELOPER_MODE)
+			Log.d(Consts.TAG, "onActivityResult: responseCode-->"
+					+ responseCode);
 		/*
 		 * checks if there was an connection error that is resolvable and tries
 		 * to connect again
@@ -394,6 +413,9 @@ public class SettingsN4Activity extends PreferenceActivity implements
 	@Override
 	public void onConnected(Bundle arg0) {
 		// TODO Auto-generated method stub
+
+		if (Consts.DEVELOPER_MODE)
+			Log.d(Consts.TAG, "onConnected: Connected to Google services");
 		String accountName = mPlusClient.getAccountName();
 		createToast(accountName + " is connected.", this);//show a custom toast on success
 

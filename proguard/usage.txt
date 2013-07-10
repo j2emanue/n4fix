@@ -1726,12 +1726,12 @@ com.google.android.gms.internal.k$a:
 com.google.android.gms.internal.m
 com.google.android.gms.internal.n:
     public static void a(boolean,java.lang.Object)
-com.google.android.gms.internal.o
 com.google.android.gms.internal.p:
     public boolean isConnecting()
     public final android.content.Context getContext()
 com.google.android.gms.internal.p$c
-com.google.android.gms.internal.r
+com.google.android.gms.internal.r:
+    public static android.content.Intent h(java.lang.String)
 com.google.android.gms.internal.s
 com.google.android.gms.internal.v
 com.google.android.gms.internal.v$a
@@ -1996,7 +1996,14 @@ com.google.android.gms.maps.model.internal.IPolylineDelegate$a$a
 com.google.android.gms.panorama.PanoramaClient
 com.google.android.gms.panorama.PanoramaClient$OnPanoramaInfoLoadedListener
 com.google.android.gms.panorama.PanoramaClient$a
-com.google.android.gms.plus.GooglePlusUtil
+com.google.android.gms.plus.GooglePlusUtil:
+    public static final int SUCCESS
+    public static final int APP_MISSING
+    public static final int APP_UPDATE_REQUIRED
+    public static final int APP_DISABLED
+    public static final java.lang.String GOOGLE_PLUS_PACKAGE
+    public static final java.lang.String PLATFORM_LOGGING_TAG
+    private GooglePlusUtil()
 com.google.android.gms.plus.PlusClient:
     public static final java.lang.String KEY_REQUEST_VISIBLE_ACTIVITIES
     public boolean A(java.lang.String)

@@ -304,8 +304,6 @@ containing a value of this type.
         public static final int location_client_ulr_inactive_age_unknown=0x7f070013;
         public static final int location_client_ulr_inactive_unknown_restriction=0x7f070014;
         public static final int pref_description_social_recommendations=0x7f07001c;
-        /**  Example settings for Data & Sync 
-         */
         public static final int pref_header_data_confidence=0x7f07001f;
         /**  Strings related to Settings 
  General settings 
@@ -313,6 +311,9 @@ containing a value of this type.
         public static final int pref_header_general=0x7f070019;
         public static final int pref_title_add_friends_to_messages=0x7f07001e;
         public static final int recommendations_sms_social=0x7f07001b;
+        /**  URL for google plus button 
+         */
+        public static final int social_recommendation_url=0x7f070021;
         /**  General send sms settings 
          */
         public static final int title_social_recommendations=0x7f07001a;

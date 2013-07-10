@@ -53,6 +53,8 @@ public class Consts {
             MILLISECONDS_PER_SECOND * DETECTION_INTERVAL_SECONDS;
     
     
-    //Google services related
+    //Google services request Codes
     public static final int REQUEST_CODE_RESOLVE_ERR = 9090;
+    public static final int PLUS_ONE_REQUEST_CODE = 130;
+
 }

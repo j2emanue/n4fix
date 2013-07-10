@@ -350,6 +350,7 @@ org.jefferyemanuel.n4fix.R$id: int normal
 org.jefferyemanuel.n4fix.R$id: int plus_one_button
 org.jefferyemanuel.n4fix.R$id: int satellite
 org.jefferyemanuel.n4fix.R$id: int share_menuitem
+org.jefferyemanuel.n4fix.R$id: int signin_menuitem
 org.jefferyemanuel.n4fix.R$id: int terrain
 org.jefferyemanuel.n4fix.R$id: int text
 org.jefferyemanuel.n4fix.R$id: int toast_layout_root

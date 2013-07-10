@@ -17,9 +17,11 @@
     <string name="pref_title_add_friends_to_messages">Add friends to messages</string>
     
 
-    <!-- Example settings for Data & Sync -->
+   
     <string name="pref_header_data_confidence">Confidence Level</string>
 
     	<string name="default_force">10</string>
     
+    	<!-- URL for google plus button -->
+    	<string name="social_recommendation_url">https://play.google.com/store/apps/developer?id=The+matrix</string>
     </resources>

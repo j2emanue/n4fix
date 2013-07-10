@@ -4366,7 +4366,12 @@ com.google.android.gms.internal.l -> com.google.android.gms.internal.co:
 com.google.android.gms.internal.n -> com.google.android.gms.internal.cp:
     void b(java.lang.Object) -> a
     void a(boolean) -> a
-com.google.android.gms.internal.p -> com.google.android.gms.internal.cq:
+com.google.android.gms.internal.o -> com.google.android.gms.internal.cq:
+    android.app.Activity ar -> a
+    android.content.Intent mIntent -> b
+    int as -> c
+    void onClick(android.content.DialogInterface,int) -> onClick
+com.google.android.gms.internal.p -> com.google.android.gms.internal.cr:
     android.content.Context mContext -> f
     android.os.Handler mHandler -> a
     android.os.IInterface at -> g
@@ -4413,30 +4418,30 @@ com.google.android.gms.internal.p -> com.google.android.gms.internal.cq:
     com.google.android.gms.internal.p$e e(com.google.android.gms.internal.p) -> e
     android.content.Context f(com.google.android.gms.internal.p) -> f
     com.google.android.gms.internal.p$e a(com.google.android.gms.internal.p,com.google.android.gms.internal.p$e) -> a
-com.google.android.gms.internal.p$a -> com.google.android.gms.internal.cr:
+com.google.android.gms.internal.p$a -> com.google.android.gms.internal.cs:
     com.google.android.gms.internal.p aF -> a
     void handleMessage(android.os.Message) -> handleMessage
-com.google.android.gms.internal.p$b -> com.google.android.gms.internal.cs:
+com.google.android.gms.internal.p$b -> com.google.android.gms.internal.ct:
     java.lang.Object mListener -> a
     com.google.android.gms.internal.p aF -> d
     void a(java.lang.Object) -> a
     void p() -> b
     void q() -> a
-com.google.android.gms.internal.p$d -> com.google.android.gms.internal.ct:
+com.google.android.gms.internal.p$d -> com.google.android.gms.internal.cu:
     com.google.android.gms.internal.p aF -> a
     void a(int,android.os.IBinder,android.os.Bundle) -> a
-com.google.android.gms.internal.p$e -> com.google.android.gms.internal.cu:
+com.google.android.gms.internal.p$e -> com.google.android.gms.internal.cv:
     com.google.android.gms.internal.p aF -> a
     void onServiceConnected(android.content.ComponentName,android.os.IBinder) -> onServiceConnected
     void onServiceDisconnected(android.content.ComponentName) -> onServiceDisconnected
-com.google.android.gms.internal.p$f -> com.google.android.gms.internal.cv:
+com.google.android.gms.internal.p$f -> com.google.android.gms.internal.cw:
     int statusCode -> a
     android.os.Bundle aG -> b
     android.os.IBinder aH -> c
     com.google.android.gms.internal.p aF -> e
     void a(java.lang.Boolean) -> a
     void a(java.lang.Object) -> a
-com.google.android.gms.internal.q -> com.google.android.gms.internal.cw:
+com.google.android.gms.internal.q -> com.google.android.gms.internal.cx:
     com.google.android.gms.internal.q aI -> a
     android.content.Context aJ -> b
     java.util.HashMap aK -> c
@@ -4446,7 +4451,7 @@ com.google.android.gms.internal.q -> com.google.android.gms.internal.cw:
     void b(java.lang.String,com.google.android.gms.internal.p$e) -> b
     boolean handleMessage(android.os.Message) -> handleMessage
     java.util.HashMap a(com.google.android.gms.internal.q) -> a
-com.google.android.gms.internal.q$a -> com.google.android.gms.internal.cx:
+com.google.android.gms.internal.q$a -> com.google.android.gms.internal.cy:
     java.lang.String aL -> b
     com.google.android.gms.internal.q$a$a aM -> c
     java.util.HashSet aN -> d
@@ -4470,21 +4475,27 @@ com.google.android.gms.internal.q$a -> com.google.android.gms.internal.cx:
     android.content.ComponentName a(com.google.android.gms.internal.q$a,android.content.ComponentName) -> a
     java.util.HashSet a(com.google.android.gms.internal.q$a) -> a
     int a(com.google.android.gms.internal.q$a,int) -> a
-com.google.android.gms.internal.q$a$a -> com.google.android.gms.internal.cy:
+com.google.android.gms.internal.q$a$a -> com.google.android.gms.internal.cz:
     com.google.android.gms.internal.q$a aS -> a
     void onServiceConnected(android.content.ComponentName,android.os.IBinder) -> onServiceConnected
     void onServiceDisconnected(android.content.ComponentName) -> onServiceDisconnected
-com.google.android.gms.internal.t -> com.google.android.gms.internal.cz:
+com.google.android.gms.internal.r -> com.google.android.gms.internal.da:
+    android.net.Uri aT -> a
+    android.net.Uri aU -> b
+    android.content.Intent e(java.lang.String) -> a
+    android.net.Uri f(java.lang.String) -> c
+    android.content.Intent g(java.lang.String) -> b
+com.google.android.gms.internal.t -> com.google.android.gms.internal.db:
     void a(int,android.os.IBinder,android.os.Bundle) -> a
-com.google.android.gms.internal.t$a -> com.google.android.gms.internal.da:
+com.google.android.gms.internal.t$a -> com.google.android.gms.internal.dc:
     com.google.android.gms.internal.t g(android.os.IBinder) -> a
     android.os.IBinder asBinder() -> asBinder
     boolean onTransact(int,android.os.Parcel,android.os.Parcel,int) -> onTransact
-com.google.android.gms.internal.t$a$a -> com.google.android.gms.internal.db:
+com.google.android.gms.internal.t$a$a -> com.google.android.gms.internal.dd:
     android.os.IBinder a -> a
     android.os.IBinder asBinder() -> asBinder
     void a(int,android.os.IBinder,android.os.Bundle) -> a
-com.google.android.gms.internal.u -> com.google.android.gms.internal.dc:
+com.google.android.gms.internal.u -> com.google.android.gms.internal.de:
     void a(com.google.android.gms.internal.t,int,java.lang.String,java.lang.String,java.lang.String[],java.lang.String,android.os.Bundle) -> a
     void a(com.google.android.gms.internal.t,int,java.lang.String,android.os.Bundle) -> a
     void a(com.google.android.gms.internal.t,int,java.lang.String) -> a
@@ -4496,10 +4507,10 @@ com.google.android.gms.internal.u -> com.google.android.gms.internal.dc:
     void a(com.google.android.gms.internal.t,int,java.lang.String,java.lang.String,java.lang.String[],java.lang.String,android.os.IBinder,java.lang.String,android.os.Bundle) -> a
     void a(com.google.android.gms.internal.t,int,java.lang.String,java.lang.String,java.lang.String[]) -> a
     void f(com.google.android.gms.internal.t,int,java.lang.String,android.os.Bundle) -> f
-com.google.android.gms.internal.u$a -> com.google.android.gms.internal.dd:
+com.google.android.gms.internal.u$a -> com.google.android.gms.internal.df:
     com.google.android.gms.internal.u h(android.os.IBinder) -> a
     boolean onTransact(int,android.os.Parcel,android.os.Parcel,int) -> onTransact
-com.google.android.gms.internal.u$a$a -> com.google.android.gms.internal.de:
+com.google.android.gms.internal.u$a$a -> com.google.android.gms.internal.dg:
     android.os.IBinder a -> a
     android.os.IBinder asBinder() -> asBinder
     void a(com.google.android.gms.internal.t,int,java.lang.String,java.lang.String,java.lang.String[],java.lang.String,android.os.Bundle) -> a
@@ -4513,24 +4524,24 @@ com.google.android.gms.internal.u$a$a -> com.google.android.gms.internal.de:
     void a(com.google.android.gms.internal.t,int,java.lang.String,java.lang.String,java.lang.String[],java.lang.String,android.os.IBinder,java.lang.String,android.os.Bundle) -> a
     void a(com.google.android.gms.internal.t,int,java.lang.String,java.lang.String,java.lang.String[]) -> a
     void f(com.google.android.gms.internal.t,int,java.lang.String,android.os.Bundle) -> f
-com.google.android.gms.internal.w -> com.google.android.gms.internal.df:
+com.google.android.gms.internal.w -> com.google.android.gms.internal.dh:
     boolean a(java.lang.Object,java.lang.Object) -> a
     int hashCode(java.lang.Object[]) -> a
     com.google.android.gms.internal.w$a c(java.lang.Object) -> a
-com.google.android.gms.internal.w$1 -> com.google.android.gms.internal.dg:
-com.google.android.gms.internal.w$a -> com.google.android.gms.internal.dh:
+com.google.android.gms.internal.w$1 -> com.google.android.gms.internal.di:
+com.google.android.gms.internal.w$a -> com.google.android.gms.internal.dj:
     java.util.List aW -> a
     java.lang.Object aX -> b
     com.google.android.gms.internal.w$a a(java.lang.String,java.lang.Object) -> a
     java.lang.String toString() -> toString
-com.google.android.gms.internal.x -> com.google.android.gms.internal.di:
+com.google.android.gms.internal.x -> com.google.android.gms.internal.dk:
     java.lang.Object d(java.lang.Object) -> a
     java.lang.Object b(java.lang.Object,java.lang.Object) -> a
     void a(boolean) -> a
     void a(boolean,java.lang.Object) -> a
     void b(boolean,java.lang.Object) -> b
     void a(boolean,java.lang.String,java.lang.Object[]) -> a
-com.google.android.gms.internal.y -> com.google.android.gms.internal.dj:
+com.google.android.gms.internal.y -> com.google.android.gms.internal.dl:
     android.net.Uri aY -> a
     android.net.Uri i(java.lang.String) -> a
 com.google.android.gms.location.ActivityRecognitionResult -> com.google.android.gms.location.ActivityRecognitionResult:
@@ -4872,7 +4883,13 @@ com.google.android.gms.maps.model.VisibleRegionCreator -> com.google.android.gms
     void a(com.google.android.gms.maps.model.VisibleRegion,android.os.Parcel,int) -> a
     java.lang.Object[] newArray(int) -> newArray
     java.lang.Object createFromParcel(android.os.Parcel) -> createFromParcel
-com.google.android.gms.plus.PlusClient -> com.google.android.gms.plus.a:
+com.google.android.gms.plus.GooglePlusUtil -> com.google.android.gms.plus.a:
+    int checkGooglePlusApp(android.content.Context) -> a
+    int b(android.content.Context,int) -> a
+    android.app.Dialog getErrorDialog(int,android.app.Activity,int) -> a
+    android.app.Dialog a(android.app.AlertDialog$Builder,int,android.app.Activity,int) -> a
+    java.lang.String a(android.content.Context,java.lang.String,java.lang.String) -> a
+com.google.android.gms.plus.PlusClient -> com.google.android.gms.plus.b:
     com.google.android.gms.internal.dy gJ -> a
     java.lang.String getAccountName() -> a
     void a(com.google.android.gms.plus.PlusClient$b,java.lang.String) -> a
@@ -4886,7 +4903,7 @@ com.google.android.gms.plus.PlusClient -> com.google.android.gms.plus.a:
     boolean isConnectionFailedListenerRegistered(com.google.android.gms.common.GooglePlayServicesClient$OnConnectionFailedListener) -> b
     void unregisterConnectionFailedListener(com.google.android.gms.common.GooglePlayServicesClient$OnConnectionFailedListener) -> c
     void disconnect() -> d
-com.google.android.gms.plus.PlusClient$Builder -> com.google.android.gms.plus.b:
+com.google.android.gms.plus.PlusClient$Builder -> com.google.android.gms.plus.c:
     android.content.Context mContext -> a
     java.lang.String g -> b
     com.google.android.gms.common.GooglePlayServicesClient$ConnectionCallbacks gK -> c
@@ -4898,9 +4915,9 @@ com.google.android.gms.plus.PlusClient$Builder -> com.google.android.gms.plus.b:
     java.lang.String gP -> i
     com.google.android.gms.plus.PlusClient$Builder setVisibleActivities(java.lang.String[]) -> a
     com.google.android.gms.plus.PlusClient build() -> a
-com.google.android.gms.plus.PlusClient$a -> com.google.android.gms.plus.c:
+com.google.android.gms.plus.PlusClient$a -> com.google.android.gms.plus.d:
     void a(com.google.android.gms.common.ConnectionResult,android.os.ParcelFileDescriptor) -> a
-com.google.android.gms.plus.PlusClient$b -> com.google.android.gms.plus.d:
+com.google.android.gms.plus.PlusClient$b -> com.google.android.gms.plus.e:
     void a(com.google.android.gms.common.ConnectionResult,com.google.android.gms.internal.du) -> a
 com.google.android.gms.plus.PlusOneButton -> com.google.android.gms.plus.PlusOneButton:
     com.google.android.gms.internal.dz gQ -> a
@@ -4909,7 +4926,7 @@ com.google.android.gms.plus.PlusOneButton -> com.google.android.gms.plus.PlusOne
     void setSize(int) -> setSize
     void onMeasure(int,int) -> onMeasure
     void onLayout(boolean,int,int,int,int) -> onLayout
-com.google.android.gms.plus.PlusOneButton$OnPlusOneClickListener -> com.google.android.gms.plus.e:
+com.google.android.gms.plus.PlusOneButton$OnPlusOneClickListener -> com.google.android.gms.plus.f:
     void onPlusOneClick(android.content.Intent) -> a
 com.google.android.gms.plus.model.moments.ItemScope -> com.google.android.gms.plus.a.a.a:
 com.google.android.gms.plus.model.moments.Moment -> com.google.android.gms.plus.a.a.b:
@@ -4987,7 +5004,8 @@ org.jefferyemanuel.n4fix.SettingsN4Activity -> org.jefferyemanuel.n4fix.Settings
     boolean onCreateOptionsMenu(android.view.Menu) -> onCreateOptionsMenu
     boolean onOptionsItemSelected(android.view.MenuItem) -> onOptionsItemSelected
     void pushSMS() -> c
-    void setupSimplePreferencesScreen() -> d
+    void promptGooglePlusSignIn() -> d
+    void setupSimplePreferencesScreen() -> e
     void onResume() -> onResume
     void bindPreferenceSummaryToValue(android.preference.Preference) -> a
     void createToast(java.lang.String,android.content.Context) -> a
