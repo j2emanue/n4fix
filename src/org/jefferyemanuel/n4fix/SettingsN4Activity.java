@@ -17,6 +17,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -88,6 +89,9 @@ public class SettingsN4Activity extends PreferenceActivity implements
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.config);
+		
+		addFooter();
+		
 		int errorCode = GooglePlusUtil.checkGooglePlusApp(this);
 		if (errorCode != GooglePlusUtil.SUCCESS) {
 			if(errorCode!= GooglePlusUtil.APP_MISSING)/*dont bother to prompt if end user does not have the app
@@ -106,8 +110,19 @@ public class SettingsN4Activity extends PreferenceActivity implements
 		}
 		mPlusOneButton = (PlusOneButton) findViewById(R.id.plus_one_button);
 		promptGooglePlusSignIn(); //force inital sign in
+		
+		
 	}
 
+	/*add footer at runtime that contains the ads and google+ icon*/
+	private void addFooter(){
+		
+		ViewGroup ll= (ViewGroup) findViewById(R.id.footer_container);
+		View footerView=View.inflate(getListView().getContext(), R.xml.footer,ll); 
+		getListView().addFooterView(footerView);
+		
+	}
+	
 	/**
 	 * set up our preference screen and load advertisement
 	 */

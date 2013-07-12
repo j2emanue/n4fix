@@ -263,9 +263,6 @@ com.google.android.gms.maps.model.PolylineOptions
 com.google.android.gms.maps.model.Tile
 com.google.android.gms.maps.model.TileOverlayOptions
 com.google.android.gms.maps.model.VisibleRegion
-com.google.android.gms.plus.PlusOneButton
-com.google.android.gms.plus.PlusOneButton: PlusOneButton(android.content.Context)
-com.google.android.gms.plus.PlusOneButton: PlusOneButton(android.content.Context,android.util.AttributeSet)
 com.google.android.gms.plus.PlusOneButton: void setOnPlusOneClickListener(com.google.android.gms.plus.PlusOneButton$OnPlusOneClickListener)
 com.google.android.gms.plus.PlusOneButton: void setAnnotation(int)
 com.google.android.gms.plus.PlusOneButton: void setSize(int)
@@ -343,6 +340,7 @@ org.jefferyemanuel.n4fix.R$id: int adone
 org.jefferyemanuel.n4fix.R$id: int adthree
 org.jefferyemanuel.n4fix.R$id: int adtwo
 org.jefferyemanuel.n4fix.R$id: int container_force
+org.jefferyemanuel.n4fix.R$id: int footer_container
 org.jefferyemanuel.n4fix.R$id: int hybrid
 org.jefferyemanuel.n4fix.R$id: int imageView1
 org.jefferyemanuel.n4fix.R$id: int none
@@ -409,6 +407,7 @@ org.jefferyemanuel.n4fix.R$styleable: int MapAttrs_uiZoomControls
 org.jefferyemanuel.n4fix.R$styleable: int MapAttrs_uiZoomGestures
 org.jefferyemanuel.n4fix.R$styleable: int MapAttrs_useViewLifecycle
 org.jefferyemanuel.n4fix.R$styleable: int MapAttrs_zOrderOnTop
+org.jefferyemanuel.n4fix.R$xml: int footer
 org.jefferyemanuel.n4fix.R$xml: int force_dialog_layout
 org.jefferyemanuel.n4fix.R$xml: int pref_force_applied
 org.jefferyemanuel.n4fix.R$xml: int pref_general

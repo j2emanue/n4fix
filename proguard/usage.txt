@@ -1292,6 +1292,7 @@ com.google.android.gms.internal.a
 com.google.android.gms.internal.a$a
 com.google.android.gms.internal.a$a$a
 com.google.android.gms.internal.aa
+com.google.android.gms.internal.ab
 com.google.android.gms.internal.af:
     private int be
     public af(int)
@@ -1502,6 +1503,8 @@ com.google.android.gms.internal.ds
 com.google.android.gms.internal.ds$a
 com.google.android.gms.internal.ds$b
 com.google.android.gms.internal.ds$c
+com.google.android.gms.internal.dt:
+    public dt(android.content.Context)
 com.google.android.gms.internal.dy:
     public void writeMoment(com.google.android.gms.plus.model.moments.Moment)
     public void loadMoments(com.google.android.gms.plus.PlusClient$OnMomentsLoadedListener,int,java.lang.String,android.net.Uri,java.lang.String,java.lang.String)
@@ -1518,6 +1521,20 @@ com.google.android.gms.internal.dy$g
 com.google.android.gms.internal.dy$h
 com.google.android.gms.internal.dy$l
 com.google.android.gms.internal.dy$m
+com.google.android.gms.internal.dz:
+    protected final android.view.LayoutInflater hH
+    public dz(android.content.Context,android.util.AttributeSet)
+    private int a(android.content.Context,android.util.AttributeSet)
+    private int b(android.content.Context,android.util.AttributeSet)
+    private android.content.Context k(android.content.Context)
+    private android.widget.FrameLayout l(android.content.Context)
+    private android.widget.ProgressBar m(android.content.Context)
+    private com.google.android.gms.internal.ea n(android.content.Context)
+    private com.google.android.gms.internal.dt o(android.content.Context)
+    public void bk()
+com.google.android.gms.internal.dz$b:
+    protected dz$b(com.google.android.gms.internal.dz)
+com.google.android.gms.internal.dz$c
 com.google.android.gms.internal.e
 com.google.android.gms.internal.e$a
 com.google.android.gms.internal.e$b
@@ -1527,6 +1544,9 @@ com.google.android.gms.internal.e$e
 com.google.android.gms.internal.e$f
 com.google.android.gms.internal.e$g
 com.google.android.gms.internal.e$h
+com.google.android.gms.internal.ea:
+    public ea(android.content.Context)
+    public void setSingleLine()
 com.google.android.gms.internal.ed:
     public ed(java.util.Set,com.google.android.gms.internal.ed,java.util.List,com.google.android.gms.internal.ed,java.lang.String,java.lang.String,java.lang.String,java.util.List,int,java.util.List,com.google.android.gms.internal.ed,java.util.List,java.lang.String,java.lang.String,com.google.android.gms.internal.ed,java.lang.String,java.lang.String,java.lang.String,java.util.List,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,com.google.android.gms.internal.ed,java.lang.String,java.lang.String,java.lang.String,java.lang.String,com.google.android.gms.internal.ed,double,com.google.android.gms.internal.ed,double,java.lang.String,com.google.android.gms.internal.ed,java.util.List,java.lang.String,java.lang.String,java.lang.String,java.lang.String,com.google.android.gms.internal.ed,java.lang.String,java.lang.String,java.lang.String,com.google.android.gms.internal.ed,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)
     public com.google.android.gms.plus.model.moments.ItemScope getAbout()
@@ -2026,6 +2046,8 @@ com.google.android.gms.plus.PlusOneButton:
     public static final int ANNOTATION_NONE
     public static final int ANNOTATION_BUBBLE
     public static final int ANNOTATION_INLINE
+    public PlusOneButton(android.content.Context)
+    public PlusOneButton(android.content.Context,android.util.AttributeSet)
     public void initialize(com.google.android.gms.plus.PlusClient,java.lang.String,com.google.android.gms.plus.PlusOneButton$OnPlusOneClickListener)
 com.google.android.gms.plus.PlusShare
 com.google.android.gms.plus.PlusShare$Builder
